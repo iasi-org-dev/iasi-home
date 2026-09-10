@@ -6,7 +6,7 @@
   const params = new URLSearchParams(window.location.search);
   const requested = params.get("doc");
   const requestedTitle = params.get("title") || "Documentación IASI";
-  const allowedOrigin = "https://iasi-org.github.io";
+  const allowedOrigin = "https://iasi-org-dev.github.io";
   let documentUrl;
 
   try {

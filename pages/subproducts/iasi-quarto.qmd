@@ -10,7 +10,7 @@ lang: es
 [Workflow](#workflow)
 [Construir y publicar](#build-publish)
 [Manuales](#resources)
-[Repository](https://github.com/iasi-org/iasi_quarto)
+[Repository](https://github.com/iasi-org-dev/iasi_quarto)
 :::
 
 ::: {.iasi-artifact-content}
@@ -26,8 +26,8 @@ IASI Quarto convierte la construcción y publicación de documentos Quarto en un
 :::
 
 ::: {.iasi-product-actions}
-<a class="iasi-product-action iasi-product-action-primary" href="../viewer.html?doc=https%3A%2F%2Fiasi-org.github.io%2Fiasi-quarto-docs%2Fuser-guide%2F&title=iasi.quarto%20User%20Guide">Abrir User Guide</a>
-<a class="iasi-product-action" href="https://github.com/iasi-org/iasi_quarto">Ver repositorio ↗</a>
+<a class="iasi-product-action iasi-product-action-primary" href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-quarto-docs%2Fuser-guide%2F&title=iasi.quarto%20User%20Guide">Abrir User Guide</a>
+<a class="iasi-product-action" href="https://github.com/iasi-org-dev/iasi_quarto">Ver repositorio ↗</a>
 :::
 
 ::: {.iasi-product-tags}
@@ -147,19 +147,19 @@ Separar ambas operaciones permite revisar el resultado antes de convertirlo en l
 
 ::: {.iasi-artifact-docs}
 ::: {.iasi-artifact-doc}
-### <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org.github.io%2Fiasi-quarto-docs%2Fuser-guide%2F&title=iasi.quarto%20User%20Guide">User Guide</a>
+### <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-quarto-docs%2Fuser-guide%2F&title=iasi.quarto%20User%20Guide">User Guide</a>
 
 Conceptos, configuración, comandos y workflow recomendado para utilizar IASI Quarto.
 :::
 
 ::: {.iasi-artifact-doc}
-### <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org.github.io%2Fiasi-quarto-docs%2Ftechnical-guide%2F&title=iasi.quarto%20Technical%20Guide">Technical Guide</a>
+### <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-quarto-docs%2Ftechnical-guide%2F&title=iasi.quarto%20Technical%20Guide">Technical Guide</a>
 
 Arquitectura, estrategias de publicación, mantenimiento y próximos pasos.
 :::
 
 ::: {.iasi-artifact-doc}
-### [Repository](https://github.com/iasi-org/iasi_quarto)
+### [Repository](https://github.com/iasi-org-dev/iasi_quarto)
 
 Código fuente, pruebas y evolución pública del paquete.
 :::

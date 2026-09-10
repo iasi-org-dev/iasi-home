@@ -8,7 +8,7 @@ lang: es
 <a class="iasi-artifact-subnav-brand" href="index.html">iasi-rstudio</a>
 [Overview](#overview)
 <a href="../status/to-be-done.html">Documentación prevista</a>
-[Repository](https://github.com/iasi-org/iasi-rstudio)
+[Repository](https://github.com/iasi-org-dev/iasi-rstudio)
 :::
 
 ::: {.iasi-artifact-content}
@@ -25,7 +25,7 @@ Un addin que acerca las operaciones y herramientas de IASI al entorno habitual d
 
 ::: {.iasi-product-actions}
 <a class="iasi-product-action iasi-product-action-primary" href="../status/to-be-done.html">Documentación prevista</a>
-<a class="iasi-product-action" href="https://github.com/iasi-org/iasi-rstudio">Ver repositorio ↗</a>
+<a class="iasi-product-action" href="https://github.com/iasi-org-dev/iasi-rstudio">Ver repositorio ↗</a>
 :::
 :::
 
@@ -43,7 +43,7 @@ La documentación de instalación, configuración y uso del addin todavía no es
 :::
 
 ::: {.iasi-artifact-doc}
-### [Repository](https://github.com/iasi-org/iasi-rstudio)
+### [Repository](https://github.com/iasi-org-dev/iasi-rstudio)
 
 Código fuente y evolución pública de la integración.
 :::

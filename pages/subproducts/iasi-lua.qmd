@@ -1,11 +1,6 @@
 ---
 pagetitle: "iasi.lua · IASI"
 lang: es
-filters:
-  - iasi-plantuml
-filter-options:
-  plantuml:
-    server: http://localhost:10025
 ---
 
 ::: {.iasi-artifact-page .iasi-artifact-publish}
@@ -143,31 +138,31 @@ filters:
 
 ::: {.iasi-artifact-docs}
 ::: {.iasi-artifact-doc}
-### <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org.github.io%2Fiasi-lua-docs%2Fuser-guide%2F&title=iasi.lua%20User%20Guide">User Guide</a>
+### <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-lua-docs%2Fuser-guide%2F&title=iasi.lua%20User%20Guide">User Guide</a>
 
 Instalación, configuración, diagramas PlantUML, aplicaciones Shinylive y solución de problemas para proyectos consumidores.
 :::
 
 ::: {.iasi-artifact-doc}
-### <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org.github.io%2Fiasi-lua-docs%2Ftechnical-guide%2F&title=iasi.lua%20Technical%20Guide">Technical Guide</a>
+### <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-lua-docs%2Ftechnical-guide%2F&title=iasi.lua%20Technical%20Guide">Technical Guide</a>
 
 Arquitectura del núcleo, construcción de extensiones y decisiones internas de diseño.
 :::
 
 ::: {.iasi-artifact-doc}
-### [Repository](https://github.com/iasi-org/iasi-lua)
+### [Repository](https://github.com/iasi-org-dev/iasi-lua)
 
 Código fuente, extensiones generadas, pruebas y scripts de construcción.
 :::
 
 ::: {.iasi-artifact-doc}
-### [Architecture](https://github.com/iasi-org/iasi-lua/blob/main/docs/architecture.md)
+### [Architecture](https://github.com/iasi-org-dev/iasi-lua/blob/main/docs/architecture.md)
 
 Responsabilidades del núcleo, estructura de las extensiones y modelo de distribución.
 :::
 
 ::: {.iasi-artifact-doc}
-### [Adding an extension](https://github.com/iasi-org/iasi-lua/blob/main/docs/adding-an-extension.md)
+### [Adding an extension](https://github.com/iasi-org-dev/iasi-lua/blob/main/docs/adding-an-extension.md)
 
 Guía para incorporar una nueva extensión a la plataforma.
 :::
