@@ -74,10 +74,10 @@ website:
         menu:
           - text: "Metodología"
             icon: easel2
-            href: pages/slides/iasi-methodology.qmd
+            href: pages/slides/methodology.qmd
           - text: "Ecosistema"
             icon: diagram-3
-            href: pages/slides/iasi-ecosystem.qmd
+            href: pages/slides/ecosystem.qmd
 
       - text: "The Challenge"
         href: pages/locale/es/challenge.qmd
