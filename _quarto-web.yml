@@ -71,8 +71,11 @@ website:
 
     right:
       - text: "Introducing IASI"
-        href: "https://iasi-org-dev.github.io/introducing-iasi/"
-        target: "_blank"    
+        menu:
+          - text: "Metodología"
+            href: pages/slides/iasi-ecosystem.html
+          - text: "Ecosistema"
+            href: pages/slides/iasi-ecosystem.html
       - text: "The Challenge"
         href: pages/locale/es/challenge.qmd
       - text: "ES"
