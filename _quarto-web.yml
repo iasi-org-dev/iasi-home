@@ -72,13 +72,13 @@ website:
     right:
       - text: "Introducing IASI"
         menu:
-      - text: "Metodología"
-        icon: easel2
-        href: pages/slides/iasi-methodology.html
-      - text: "Ecosistema"
-        icon: diagram-3
-        href: pages/slides/iasi-ecosystem.html
-     - text: "The Challenge"
+         - text: "Metodología"
+           icon: easel2
+           href: pages/slides/iasi-methodology.html
+         - text: "Ecosistema"
+           icon: diagram-3
+           href: pages/slides/iasi-ecosystem.html
+   - text: "The Challenge"
         href: pages/locale/es/challenge.qmd
       - text: "ES"
         href: pages/locale/es/index.qmd
