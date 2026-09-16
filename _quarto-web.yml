@@ -74,10 +74,12 @@ website:
         menu:
           - text: "Metodología"
             icon: easel2
-            href: pages/slides/methodology.qmd
+            href: "https://1drv.ms/p/c/a07f15822e16273b/IQABDnXsoiFaSITQjgnkUD8wATQ36S1oRHzF4N0YMZI0cSY?e=nRzMFc"
+            target: "_blank"                        
           - text: "Ecosistema"
             icon: diagram-3
-            href: pages/slides/ecosystem.qmd
+            href: "https://1drv.ms/p/c/a07f15822e16273b/IQAFsr4Sqp-mTaE7uciJUwbeAYvi5G5f9SIyoURgqZDEyzM?e=87feLO"
+            target: "_blank"            
 
       - text: "The Challenge"
         href: pages/locale/es/challenge.qmd
