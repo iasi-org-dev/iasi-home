@@ -116,3 +116,5 @@ format:
     smooth-scroll: true
     include-in-header:
       - language.html
+    nclude-after-body:
+      - resources/js/navbar.js      
