@@ -32,7 +32,7 @@ website:
           - text: "IASI RStudio"
             href: pages/products/iasi-rstudio.qmd
           - text: "IASI Lua"
-            href: pages/product/iasi-lua.qmd
+            href: pages/products/iasi-lua.qmd
 
       - text: "Subproductos"
         menu:

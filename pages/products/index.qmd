@@ -6,7 +6,7 @@ lang: es
 ::: {.iasi-artifact-page .iasi-artifact-publish}
 :::: {.iasi-artifact-subnav}
 <a class="iasi-artifact-subnav-brand" href="index.html">Artefactos</a>
-[IASI Tools Dev](iasi-tools-dev.qmd)
+[IASI Tools Dev](iasi-dev-tools.qmd)
 [IASI RStudio](iasi-rstudio.qmd)
 ::::
 
@@ -24,7 +24,7 @@ A diferencia de los subproductos, no nacen para convertirse en soluciones públi
 ::: {#iasi-tools-dev .iasi-card .iasi-card-publish}
 **OPERAR**
 
-### [iasi-tools-dev](iasi-tools-dev.qmd)
+### [iasi-tools-dev](iasi-dev-tools.qmd)
 
 Herramientas y comandos de soporte que simplifican las operaciones habituales del ecosistema IASI y unifican su forma de trabajo.
 :::
