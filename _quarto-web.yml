@@ -25,14 +25,14 @@ website:
         menu:
           - text: "Todos"
             href: pages/products/index.qmd
-          - text: "IASI Quarto"
-            href: pages/status/under-construction.qmd
-          - text: "IASI Lua"
-            href: pages/status/under-construction.qmd
-          - text: "IASI Tools Dev"
-            href: pages/products/iasi-tools-dev.qmd
+          - text: "IASI R"
+            href: pages/products/iasi-r.qmd
+          - text: "IASI Dev Tools"
+            href: pages/products/iasi-dev-tools.qmd
           - text: "IASI RStudio"
             href: pages/products/iasi-rstudio.qmd
+          - text: "IASI Lua"
+            href: pages/product/iasi-lua.qmd
 
       - text: "Subproductos"
         menu:

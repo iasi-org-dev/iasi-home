@@ -1,0 +1,177 @@
+---
+pagetitle: "iasi-lua · IASI"
+lang: es
+---
+
+::: {.iasi-artifact-page .iasi-artifact-publish}
+::: {.iasi-artifact-subnav}
+<a class="iasi-artifact-subnav-brand" href="index.html">iasi-lua</a>
+[Overview](#overview)
+[Extensiones](#extensions)
+[Ciclo](#cycle)
+[Modelo](#model)
+<a href="https://github.com/iasi-org-dev/iasi-lua/tree/master/docs/user-guide">User Guide</a>
+<a href="https://github.com/iasi-org-dev/iasi-lua/tree/master/docs/technical-guide">Technical Guide</a>
+[Repository](https://github.com/iasi-org-dev/iasi-lua)
+:::
+
+::: {.iasi-artifact-content}
+::: {.iasi-product-hero}
+::: {.iasi-product-kicker}
+EXTENSIONES LUA PARA QUARTO
+:::
+
+# IASI Lua: Capacidades reutilizables dentro de Quarto
+
+::: {.iasi-product-lead}
+La plataforma Lua de IASI para **extender el renderizado de Quarto con capacidades especializadas**, compartiendo un núcleo común y generando extensiones autónomas para los proyectos consumidores.
+:::
+
+::: {.iasi-product-actions}
+<a class="iasi-product-action iasi-product-action-primary" href="https://github.com/iasi-org-dev/iasi-lua/tree/master/docs/user-guide">Abrir User Guide</a>
+<a class="iasi-product-action" href="https://github.com/iasi-org-dev/iasi-lua">Ver repositorio ↗</a>
+:::
+:::
+
+## Overview {#overview}
+
+`iasi-lua` reúne las extensiones Lua de IASI para Quarto. La fuente se organiza alrededor de un **core compartido** y de directorios independientes por extensión; el build materializa distribuciones Quarto autocontenidas bajo `_extensions/`.
+
+La regla es sencilla: **la fuente se mantiene una vez y la distribución se genera**. Los proyectos consumidores instalan y cargan las extensiones resultantes sin depender de la estructura interna del repositorio.
+
+::: {.iasi-artifact-flow}
+::: {.iasi-artifact-step}
+### Core
+
+Proporciona infraestructura común de configuración, motor, caché, filesystem, metadatos y mediabag.
+:::
+
+::: {.iasi-artifact-step}
+### Extensión
+
+Cada capacidad mantiene únicamente su lógica específica y su manifiesto Quarto.
+:::
+
+::: {.iasi-artifact-step}
+### Build
+
+Combina el core y la extensión para producir una distribución autónoma.
+:::
+
+::: {.iasi-artifact-step}
+### Consume
+
+Quarto carga la extensión generada como un filtro normal dentro del proyecto.
+:::
+:::
+
+## Extensiones {#extensions}
+
+::: {.iasi-artifact-docs}
+::: {.iasi-artifact-doc}
+### IASI PlantUML
+
+Convierte diagramas PlantUML escritos como código en imágenes integradas durante el renderizado.
+
+```yaml
+filters:
+  - iasi-plantuml
+```
+
+Incluye configuración del servidor, formato de salida, caché y estilos compartidos.
+:::
+
+::: {.iasi-artifact-doc}
+### IASI Shiny
+
+Integra aplicaciones Shiny para R en publicaciones HTML estáticas mediante Shinylive y webR.
+
+```yaml
+filters:
+  - iasi-shiny
+```
+
+Permite incorporar bloques interactivos sin convertir la publicación completa en un servidor Shiny.
+:::
+:::
+
+## Ciclo de desarrollo {#cycle}
+
+Toda la automatización del proyecto se mantiene en Bash.
+
+```text
+core/ + extensión
+       ↓
+./scripts/build-all.sh
+       ↓
+_extensions/
+       ↓
+./scripts/check-generated.sh
+./scripts/check-versions.sh
+./scripts/test-all.sh
+       ↓
+./scripts/install-local.sh <proyecto>
+       ↓
+proyecto Quarto consumidor
+```
+
+También puede construirse una única extensión:
+
+```bash
+./scripts/build-extension.sh plantuml
+```
+
+En Windows, este ciclo se ejecuta desde WSL u otro entorno Bash compatible.
+
+## Modelo fuente → distribución {#model}
+
+```text
+software/iasi-lua/
+├── core/                 plataforma Lua compartida
+├── plantuml/             fuente de IASI PlantUML
+├── shiny/                fuente de IASI Shiny
+├── scripts/              automatización de build, checks y tests
+└── _extensions/          distribuciones Quarto generadas
+    ├── iasi-plantuml/
+    └── iasi-shiny/
+```
+
+`_extensions/` **no es fuente de desarrollo**. No se edita manualmente: cada distribución se vuelve a materializar desde `core/` y desde el directorio fuente de su extensión.
+
+Ese límite mantiene separadas dos responsabilidades:
+
+```text
+fuente mantenible
+      ↓ build
+distribución instalable
+```
+
+## Recursos {#resources}
+
+::: {.iasi-artifact-docs}
+::: {.iasi-artifact-doc}
+### [User Guide](https://github.com/iasi-org-dev/iasi-lua/tree/master/docs/user-guide)
+
+Instalación y uso de las extensiones desde proyectos Quarto consumidores.
+:::
+
+::: {.iasi-artifact-doc}
+### [Technical Guide](https://github.com/iasi-org-dev/iasi-lua/tree/master/docs/technical-guide)
+
+Arquitectura Lua, core compartido, desarrollo de extensiones y proceso de distribución.
+:::
+
+::: {.iasi-artifact-doc}
+### [Architecture](https://github.com/iasi-org-dev/iasi-lua/blob/master/docs/architecture.md)
+
+Estructura del core, responsabilidades internas y modelo de generación de `_extensions/`.
+:::
+
+::: {.iasi-artifact-doc}
+### [Repository](https://github.com/iasi-org-dev/iasi-lua)
+
+Código fuente, extensiones, automatización, documentación y evolución de `iasi-lua`.
+:::
+:::
+:::
+:::
