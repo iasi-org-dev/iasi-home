@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>iasi-lua · IASI</title>
+<title>IASI-Lua</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,41 +26,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -75,7 +40,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d35a639e3e1b3f229ca74f37e76bc102.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9cb7cb32b591cc9bfebfd21a1afee125.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No se han encontrado resultados",
@@ -310,123 +275,103 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div class="iasi-artifact-page iasi-artifact-publish">
 <div class="iasi-artifact-subnav">
-<p><a class="iasi-artifact-subnav-brand" href="index.html">iasi-lua</a> <a href="#overview">Overview</a> <a href="#extensions">Extensiones</a> <a href="#cycle">Ciclo</a> <a href="#model">Modelo</a> <a href="https://github.com/iasi-org-dev/iasi-lua/tree/master/docs/user-guide">User Guide</a> <a href="https://github.com/iasi-org-dev/iasi-lua/tree/master/docs/technical-guide">Technical Guide</a> <a href="https://github.com/iasi-org-dev/iasi-lua">Repository</a></p>
+<p><a class="iasi-artifact-subnav-brand" href="index.html">iasi-lua</a> <a href="#overview">Overview</a> <a href="#rac">Principio RAC</a> <a href="#cycle">Ciclo</a> <a href="#graphics">IASI Graphics</a> <a href="#plantuml">IASI PlantUML</a> <a href="#shiny">IASI Shiny</a> <a href="#source-model">Modelo fuente</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-lua%2Fuser-guide%2F&amp;title=iasi-lua User Guide">User Guide</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-lua%2Fdeveloper-guide%2F&amp;title=iasi-lua Developer Guide">Developer Guide</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-lua%2Ftechnical-guide%2F&amp;title=iasi-lua Technical Guide">Technical Guide</a> <a href="https://github.com/iasi-org-dev/iasi-lua">Repository</a></p>
 </div>
-<div class="iasi-artifact-content">
-<div class="iasi-product-hero">
-<div class="iasi-product-kicker">
-<p>EXTENSIONES LUA PARA QUARTO</p>
-</div>
-<section id="iasi-lua-capacidades-reutilizables-dentro-de-quarto" class="level1">
-<h1>IASI Lua: Capacidades reutilizables dentro de Quarto</h1>
+<section id="iasi-lua-herramientas-ligeras-para-ingeniería" class="level1 iasi-artifact-content">
+<h1>IASI Lua: herramientas ligeras para ingeniería</h1>
 <div class="iasi-product-lead">
-<p>La plataforma Lua de IASI para <strong>extender el renderizado de Quarto con capacidades especializadas</strong>, compartiendo un núcleo común y generando extensiones autónomas para los proyectos consumidores.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="../../resources/images/banner_under_construction_en.png" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:100.0%"></p>
+</figure>
 </div>
-<div class="iasi-product-actions">
-<p><a class="iasi-product-action iasi-product-action-primary" href="https://github.com/iasi-org-dev/iasi-lua/tree/master/docs/user-guide">Abrir User Guide</a> <a class="iasi-product-action" href="https://github.com/iasi-org-dev/iasi-lua">Ver repositorio ↗</a></p>
-</div>
-</section>
+<p><code>iasi-lua</code> reúne extensiones Lua que amplían las capacidades de Quarto dentro de IASI. La fuente se organiza alrededor de un <strong>core compartido</strong> y de directorios independientes para cada extensión; durante el proceso de build, estas extensiones se materializan como distribuciones Quarto autocontenidas bajo <code>_extensions/</code>.</p>
+<p>Además de su integración nativa con Quarto, las extensiones seguirán también el <strong>modelo MCP</strong>, de forma que sus capacidades puedan exponerse e integrarse de manera homogénea con otros componentes y Sistemas Inteligentes del ecosistema IASI.</p>
 </div>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><code>iasi-lua</code> reúne las extensiones Lua de IASI para Quarto. La fuente se organiza alrededor de un <strong>core compartido</strong> y de directorios independientes por extensión; el build materializa distribuciones Quarto autocontenidas bajo <code>_extensions/</code>.</p>
-<p>La regla es sencilla: <strong>la fuente se mantiene una vez y la distribución se genera</strong>. Los proyectos consumidores instalan y cargan las extensiones resultantes sin depender de la estructura interna del repositorio.</p>
+<p><code>iasi-lua</code> agrupa extensiones Lua concebidas para ampliar Quarto dentro del ecosistema IASI. Cada extensión mantiene su fuente de forma independiente, reutilizando un <strong>core compartido</strong> cuando corresponde, y se materializa como una distribución autocontenida bajo <code>_extensions/</code>.</p>
+<p>Entre las extensiones se encuentran <strong><code>iasi-graphics</code></strong>, orientada a generar diagramas simples con <strong>estilo de presentación</strong>; <strong><code>iasi-plantuml</code></strong>, que integra PlantUML como lenguaje de diagramación textual dentro de Quarto; e <strong><code>iasi-shiny</code></strong>, que aporta un servidor web Shiny embebido para incorporar gráficos y experiencias interactivas en los artefactos IASI.</p>
+<p>El diseño mantiene la misma separación conceptual utilizada en otros componentes IASI: el modelo fuente describe la intención y la extensión se responsabiliza de transformarlo en un artefacto. Las capacidades que resulte útil exponer fuera de Quarto seguirán también el <strong>modelo MCP</strong>.</p>
 <div class="iasi-artifact-flow">
-<section id="core" class="level3 iasi-artifact-step">
-<h3 class="anchored" data-anchor-id="core">Core</h3>
-<p>Proporciona infraestructura común de configuración, motor, caché, filesystem, metadatos y mediabag.</p>
+<section id="modelo" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="modelo">Modelo</h3>
+<p>Describe de forma compacta el contenido y la estructura que se desea representar.</p>
 </section>
-<section id="extensión" class="level3 iasi-artifact-step">
-<h3 class="anchored" data-anchor-id="extensión">Extensión</h3>
-<p>Cada capacidad mantiene únicamente su lógica específica y su manifiesto Quarto.</p>
+<section id="generación" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="generación">Generación</h3>
+<p><code>iasi-graphics</code> interpreta el modelo y construye la representación gráfica.</p>
 </section>
-<section id="build" class="level3 iasi-artifact-step">
-<h3 class="anchored" data-anchor-id="build">Build</h3>
-<p>Combina el core y la extensión para producir una distribución autónoma.</p>
-</section>
-<section id="consume" class="level3 iasi-artifact-step">
-<h3 class="anchored" data-anchor-id="consume">Consume</h3>
-<p>Quarto carga la extensión generada como un filtro normal dentro del proyecto.</p>
+<section id="presentación" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="presentación">Presentación</h3>
+<p>El resultado se orienta a diagramas simples, legibles y adecuados para documentación y presentaciones.</p>
 </section>
 </div>
 </section>
-<section id="extensions" class="level2">
-<h2 class="anchored" data-anchor-id="extensions">Extensiones</h2>
-<div class="iasi-artifact-docs">
-<section id="iasi-plantuml" class="level3 iasi-artifact-doc">
-<h3 class="anchored" data-anchor-id="iasi-plantuml">IASI PlantUML</h3>
-<p>Convierte diagramas PlantUML escritos como código en imágenes integradas durante el renderizado.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filters</span><span class="kw">:</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> iasi-plantuml</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Incluye configuración del servidor, formato de salida, caché y estilos compartidos.</p>
-</section>
-<section id="iasi-shiny" class="level3 iasi-artifact-doc">
-<h3 class="anchored" data-anchor-id="iasi-shiny">IASI Shiny</h3>
-<p>Integra aplicaciones Shiny para R en publicaciones HTML estáticas mediante Shinylive y webR.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">filters</span><span class="kw">:</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="kw">-</span><span class="at"> iasi-shiny</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>Permite incorporar bloques interactivos sin convertir la publicación completa en un servidor Shiny.</p>
-</section>
-</div>
+<section id="rac" class="level2">
+<h2 class="anchored" data-anchor-id="rac">Principio RAC</h2>
+<p><code>iasi-lua</code> aplica el <strong>Principio RAC · Reuse, Adapt, Create</strong>, un principio transversal de IASI:</p>
+<blockquote class="blockquote">
+<p><strong>Si existe, lo usamos. Si no llega, lo adaptamos. Si no existe, lo creamos.</strong></p>
+</blockquote>
+<p>La prioridad es aprovechar primero las capacidades disponibles en Quarto y en su ecosistema. Cuando una capacidad existente cubre parcialmente la necesidad, se adapta o extiende. Solo cuando ninguna de esas opciones resulta suficiente se crea una nueva extensión IASI.</p>
+<p>Este criterio evita duplicar capacidades innecesariamente y favorece que <code>iasi-lua</code> actúe como una capa de integración y extensión antes que como un ecosistema paralelo. El mismo principio se aplica a la exposición de capacidades mediante MCP.</p>
 </section>
 <section id="cycle" class="level2">
 <h2 class="anchored" data-anchor-id="cycle">Ciclo de desarrollo</h2>
-<p>Toda la automatización del proyecto se mantiene en Bash.</p>
-<pre class="text"><code>core/ + extensión
-       ↓
-./scripts/build-all.sh
-       ↓
-_extensions/
-       ↓
-./scripts/check-generated.sh
-./scripts/check-versions.sh
-./scripts/test-all.sh
-       ↓
-./scripts/install-local.sh &lt;proyecto&gt;
-       ↓
-proyecto Quarto consumidor</code></pre>
-<p>También puede construirse una única extensión:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="ex">./scripts/build-extension.sh</span> plantuml</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
-<p>En Windows, este ciclo se ejecuta desde WSL u otro entorno Bash compatible.</p>
+<p>El ciclo de desarrollo sigue el mismo patrón general utilizado por los componentes IASI:</p>
+<p><img src="iasi-lua_files/mediabag/plantuml/15e9a95408cd16f9e7f19355a3ee24f3e31182d9.png" class="img-fluid"></p>
+<p>Cada fase mantiene una responsabilidad diferenciada: validar, construir, preparar la publicación, reunir la release y, finalmente, permitir su consumo o despliegue externo.</p>
 </section>
-<section id="model" class="level2">
-<h2 class="anchored" data-anchor-id="model">Modelo fuente → distribución</h2>
-<pre class="text"><code>software/iasi-lua/
-├── core/                 plataforma Lua compartida
-├── plantuml/             fuente de IASI PlantUML
-├── shiny/                fuente de IASI Shiny
-├── scripts/              automatización de build, checks y tests
-└── _extensions/          distribuciones Quarto generadas
-    ├── iasi-plantuml/
-    └── iasi-shiny/</code></pre>
-<p><code>_extensions/</code> <strong>no es fuente de desarrollo</strong>. No se edita manualmente: cada distribución se vuelve a materializar desde <code>core/</code> y desde el directorio fuente de su extensión.</p>
-<p>Ese límite mantiene separadas dos responsabilidades:</p>
-<pre class="text"><code>fuente mantenible
-      ↓ build
-distribución instalable</code></pre>
+<section id="graphics" class="level2">
+<h2 class="anchored" data-anchor-id="graphics">IASI Graphics</h2>
+<p><code>iasi-graphics</code> es una herramienta para generar <strong>diagramas simples con estilo de presentación</strong>.</p>
+<p>No parte de un editor gráfico. Parte de un <strong>modelo fuente textual</strong>, pequeño y reproducible, que puede mantenerse junto al resto de fuentes del proyecto.</p>
+<p>El modelo fuente utiliza PlantUML.</p>
+</section>
+<section id="plantuml" class="level2">
+<h2 class="anchored" data-anchor-id="plantuml">IASI PlantUML</h2>
+<p><code>iasi-plantuml</code> integra <strong>PlantUML</strong> en el flujo de autoría de Quarto como lenguaje fuente para diagramas versionables y reproducibles.</p>
+<p>La extensión permite tratar un diagrama como parte del propio documento: la fuente describe la estructura o relación que se quiere representar y el render de Quarto materializa su representación gráfica. De este modo, los diagramas permanecen junto al resto de fuentes del proyecto y participan del mismo ciclo de edición, revisión y publicación.</p>
+<p><code>iasi-plantuml</code> proporciona también la base de diagramación utilizada por otras extensiones, como <code>iasi-graphics</code>, cuando PlantUML resulta suficiente como lenguaje fuente.</p>
+</section>
+<section id="shiny" class="level2">
+<h2 class="anchored" data-anchor-id="shiny">IASI Shiny</h2>
+<p><code>iasi-shiny</code> integra <strong>Shiny</strong> como servidor web embebido para aquellas representaciones que necesitan ir más allá de una salida estática.</p>
+<p>Su función es proporcionar a los artefactos IASI una capa de visualización interactiva capaz de servir gráficos, controles y vistas dinámicas desde el propio entorno de trabajo. Quarto conserva el papel de documento y estructura de publicación, mientras Shiny aporta la ejecución interactiva cuando el contenido necesita responder al usuario, explorar datos o modificar una visualización en tiempo real.</p>
+<p>La intención no es convertir cada gráfico en una aplicación web, sino disponer de una capacidad interactiva cuando una representación estática deja de ser suficiente, siguiendo el <strong>Principio RAC</strong>.</p>
+</section>
+<section id="source-model" class="level2">
+<h2 class="anchored" data-anchor-id="source-model">Modelo fuente</h2>
+<p>Un modelo mínimo puede ser:</p>
+<p><img src="iasi-lua_files/mediabag/plantuml/000c301cd91f244edf46632e9832349e93d6b54a.png" class="img-fluid"></p>
+<p>El modelo expresa únicamente la estructura que se desea representar. <code>iasi-graphics</code> se ocupa de convertir esa descripción en una representación gráfica preparada para su uso en documentación o presentaciones.</p>
+<p>La separación es deliberada:</p>
+<p><img src="iasi-lua_files/mediabag/plantuml/542ba77882e0f506e161594027d189ae2222bb6d.png" class="img-fluid"></p>
+<p>De este modo, el contenido del diagrama permanece como fuente versionable y la representación visual se trata como un artefacto generado.</p>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Recursos</h2>
 <div class="iasi-artifact-docs">
 <section id="user-guide" class="level3 iasi-artifact-doc">
-<h3 class="anchored" data-anchor-id="user-guide"><a href="https://github.com/iasi-org-dev/iasi-lua/tree/master/docs/user-guide">User Guide</a></h3>
-<p>Instalación y uso de las extensiones desde proyectos Quarto consumidores.</p>
+<h3 class="anchored" data-anchor-id="user-guide"><a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-lua%2Fuser-guide%2F&amp;title=iasi-lua User Guide">User Guide</a></h3>
+<p>Uso de las herramientas incluidas en <code>iasi-lua</code>, modelos fuente y generación de artefactos.</p>
+</section>
+<section id="developer-guide" class="level3 iasi-artifact-doc">
+<h3 class="anchored" data-anchor-id="developer-guide"><a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-lua%2Fdeveloper-guide%2F&amp;title=iasi-lua Developer Guide">Developer Guide</a></h3>
+<p>Principios de diseño, Principio RAC, modelo MCP, convenciones y criterios para desarrollar y evolucionar extensiones Lua dentro de IASI.</p>
 </section>
 <section id="technical-guide" class="level3 iasi-artifact-doc">
-<h3 class="anchored" data-anchor-id="technical-guide"><a href="https://github.com/iasi-org-dev/iasi-lua/tree/master/docs/technical-guide">Technical Guide</a></h3>
-<p>Arquitectura Lua, core compartido, desarrollo de extensiones y proceso de distribución.</p>
-</section>
-<section id="architecture" class="level3 iasi-artifact-doc">
-<h3 class="anchored" data-anchor-id="architecture"><a href="https://github.com/iasi-org-dev/iasi-lua/blob/master/docs/architecture.md">Architecture</a></h3>
-<p>Estructura del core, responsabilidades internas y modelo de generación de <code>_extensions/</code>.</p>
+<h3 class="anchored" data-anchor-id="technical-guide"><a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-lua%2Ftechnical-guide%2F&amp;title=iasi-lua Technical Guide">Technical Guide</a></h3>
+<p>Arquitectura interna, ejecución, modelos fuente y contratos técnicos de las herramientas de <code>iasi-lua</code>.</p>
 </section>
 <section id="repository" class="level3 iasi-artifact-doc">
 <h3 class="anchored" data-anchor-id="repository"><a href="https://github.com/iasi-org-dev/iasi-lua">Repository</a></h3>
-<p>Código fuente, extensiones, automatización, documentación y evolución de <code>iasi-lua</code>.</p>
+<p>Código fuente, extensiones Lua, documentación y evolución pública de <code>iasi-lua</code>.</p>
 </section>
 </div>
 </section>
-</div>
+</section>
 </div>
 
 

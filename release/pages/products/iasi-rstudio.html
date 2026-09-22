@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>iasi-rstudio · IASI</title>
+<title>IASI-RStudio</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d35a639e3e1b3f229ca74f37e76bc102.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9cb7cb32b591cc9bfebfd21a1afee125.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No se han encontrado resultados",
@@ -275,41 +275,88 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="iasi-artifact-page iasi-artifact-environment">
 <div class="iasi-artifact-subnav">
-<p><a class="iasi-artifact-subnav-brand" href="index.html">iasi-rstudio</a> <a href="#overview">Overview</a> <a href="../status/to-be-done.html">Documentación prevista</a> <a href="https://github.com/iasi-org-dev/iasi-rstudio">Repository</a></p>
+<p><a class="iasi-artifact-subnav-brand" href="index.html">iasi-rstudio</a> <a href="#overview">Overview</a> <a href="#model">Modelo</a> <a href="#capabilities">Capacidades</a> <a href="#integration">Integración</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-rstudio%2Fuser-guide%2F&amp;title=iasi-rstudio User Guide">User Guide</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-rstudio%2Fdeveloper-guide%2F&amp;title=iasi-rstudio Developer Guide">Developer Guide</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-rstudio%2Ftechnical-guide%2F&amp;title=iasi-rstudio Technical Guide">Technical Guide</a> <a href="https://github.com/iasi-org-dev/iasi-rstudio">Repository</a></p>
 </div>
-<div class="iasi-artifact-content">
-<div class="iasi-product-hero">
-<div class="iasi-product-kicker">
-<p>ENTORNO DE DESARROLLO</p>
-</div>
-<section id="iasi-rstudio-el-ecosistema-iasi-dentro-de-rstudio" class="level1">
-<h1>IASI RStudio: El ecosistema IASI dentro de RStudio</h1>
+<section id="iasi-rstudio-iasi-dentro-de-rstudio" class="level1 iasi-artifact-content">
+<h1>IASI RStudio: IASI dentro de RStudio</h1>
 <div class="iasi-product-lead">
-<p>Un addin que acerca las operaciones y herramientas de IASI al entorno habitual de trabajo con RStudio.</p>
-</div>
-<div class="iasi-product-actions">
-<p><a class="iasi-product-action iasi-product-action-primary" href="../status/to-be-done.html">Documentación prevista</a> <a class="iasi-product-action" href="https://github.com/iasi-org-dev/iasi-rstudio">Ver repositorio ↗</a></p>
-</div>
-</section>
+<p><img src="../../resources/images/banner_under_construction_en.png" class="img-fluid"></p>
+<p><code>iasi-rstudio</code> integra el ecosistema IASI en RStudio y acerca sus operaciones al flujo de trabajo habitual del desarrollador. Actúa como una <strong>capa interactiva de integración</strong>, proporcionando acciones, asistentes y puntos de entrada propios de RStudio sin duplicar la lógica de ingeniería de los componentes IASI.</p>
 </div>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><code>iasi-rstudio</code> proporciona una integración específica para utilizar capacidades del ecosistema IASI desde RStudio. Su interfaz permite incorporarlas al flujo de desarrollo sin depender exclusivamente de la línea de comandos.</p>
+<p><code>iasi-rstudio</code> es el plugin de integración entre RStudio y IASI. Su responsabilidad es trasladar las capacidades de IASI al entorno interactivo de RStudio de forma coherente con sus proyectos, menús, comandos y herramientas de desarrollo.</p>
+<p>La lógica de ingeniería permanece en los componentes especializados del ecosistema:</p>
+<ul>
+<li><strong><code>iasi-r</code></strong> proporciona las capacidades relacionadas con proyectos R y Quarto y con su ciclo de validación, construcción, publicación y release.</li>
+<li><strong><code>iasi-dev</code></strong> proporciona las capacidades de nivel superior relacionadas con proyectos, organización, materialización, workflows y operaciones de desarrollo.</li>
+</ul>
+<p><code>iasi-rstudio</code> se apoya en ambos y presenta esas capacidades dentro de RStudio como una experiencia integrada.</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Modelo</h2>
+<p><img src="iasi-rstudio_files/mediabag/plantuml/732816cd75cbbb6f4212368a7898b31b049fffb0.png" class="img-fluid"></p>
+<p>La separación es deliberada: <code>iasi-rstudio</code> conoce <strong>cómo presentar e integrar</strong> una capacidad en RStudio; <code>iasi-r</code> e <code>iasi-dev</code> conocen <strong>cómo ejecutarla</strong> dentro del modelo de ingeniería IASI.</p>
+</section>
+<section id="capabilities" class="level2">
+<h2 class="anchored" data-anchor-id="capabilities">Capacidades</h2>
+<div class="iasi-artifact-flow">
+<section id="crear-proyectos-quarto" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="crear-proyectos-quarto">Crear proyectos Quarto</h3>
+<p>Inicializa proyectos Quarto siguiendo las convenciones, estructura y configuración definidas por IASI.</p>
+</section>
+<section id="crear-proyectos-r" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="crear-proyectos-r">Crear proyectos R</h3>
+<p>Crea proyectos R preparados para trabajar dentro del modelo IASI, incluyendo su estructura inicial y los elementos de configuración correspondientes.</p>
+</section>
+<section id="generar-edr" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="generar-edr">Generar EDR</h3>
+<p>Facilita la creación de fichas <strong>EDR</strong> a partir de plantillas y convenciones IASI, integrándolas directamente en el proyecto activo.</p>
+</section>
+<section id="ejecutar-el-ciclo-iasi" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="ejecutar-el-ciclo-iasi">Ejecutar el ciclo IASI</h3>
+<p>Expone desde RStudio operaciones como validación, build, publicación y release, delegando su ejecución en <code>iasi-r</code>.</p>
+</section>
+<section id="operar-sobre-proyectos" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="operar-sobre-proyectos">Operar sobre proyectos</h3>
+<p>Permite acceder a operaciones de proyecto, materialización y workflows proporcionadas por <code>iasi-dev</code> sin abandonar RStudio.</p>
+</section>
+<section id="crear-artefactos-iasi" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="crear-artefactos-iasi">Crear artefactos IASI</h3>
+<p>Ofrece asistentes para incorporar al proyecto configuraciones, documentación, estructuras y otros artefactos definidos por el ecosistema IASI.</p>
+</section>
+</div>
+<p>Estas capacidades pueden materializarse mediante addins, comandos, asistentes, acciones contextuales u otros mecanismos propios de RStudio. La interfaz concreta puede evolucionar sin alterar la separación de responsabilidades entre el plugin y los componentes que ejecutan la lógica.</p>
+</section>
+<section id="integration" class="level2">
+<h2 class="anchored" data-anchor-id="integration">Integración</h2>
+<p><code>iasi-rstudio</code> funciona como un <strong>frontend especializado para RStudio</strong>. No introduce un segundo modelo de proyecto ni una implementación paralela de los procesos IASI.</p>
+<p>Cuando una acción pertenece al dominio R o Quarto, el plugin utiliza <code>iasi-r</code>. Cuando pertenece al dominio de organización, proyecto u orquestación del entorno de desarrollo, utiliza <code>iasi-dev</code>.</p>
+<p><img src="iasi-rstudio_files/mediabag/plantuml/1eac5edcf1f5434a119bb4dfbd678bde00daa68b.png" class="img-fluid"></p>
+<p>El resultado es una integración en la que RStudio aporta la experiencia interactiva y IASI mantiene centralizada la semántica de ingeniería.</p>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Recursos</h2>
 <div class="iasi-artifact-docs">
-<section id="documentación-prevista" class="level3 iasi-artifact-doc">
-<h3 class="anchored" data-anchor-id="documentación-prevista"><a href="../status/to-be-done.html">Documentación prevista</a></h3>
-<p>La documentación de instalación, configuración y uso del addin todavía no está publicada.</p>
+<section id="user-guide" class="level3 iasi-artifact-doc">
+<h3 class="anchored" data-anchor-id="user-guide"><a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-rstudio%2Fuser-guide%2F&amp;title=iasi-rstudio User Guide">User Guide</a></h3>
+<p>Uso del plugin, creación de proyectos, generación de EDR y acceso a las operaciones IASI desde RStudio.</p>
+</section>
+<section id="developer-guide" class="level3 iasi-artifact-doc">
+<h3 class="anchored" data-anchor-id="developer-guide"><a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-rstudio%2Fdeveloper-guide%2F&amp;title=iasi-rstudio Developer Guide">Developer Guide</a></h3>
+<p>Principios de integración, responsabilidades del plugin y criterios para incorporar nuevas capacidades IASI a RStudio.</p>
+</section>
+<section id="technical-guide" class="level3 iasi-artifact-doc">
+<h3 class="anchored" data-anchor-id="technical-guide"><a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-rstudio%2Ftechnical-guide%2F&amp;title=iasi-rstudio Technical Guide">Technical Guide</a></h3>
+<p>Arquitectura de integración, comunicación con <code>iasi-r</code> e <code>iasi-dev</code> y mecanismos técnicos utilizados dentro de RStudio.</p>
 </section>
 <section id="repository" class="level3 iasi-artifact-doc">
 <h3 class="anchored" data-anchor-id="repository"><a href="https://github.com/iasi-org-dev/iasi-rstudio">Repository</a></h3>
-<p>Código fuente y evolución pública de la integración.</p>
+<p>Código fuente, integración con RStudio, documentación y evolución pública de <code>iasi-rstudio</code>.</p>
 </section>
 </div>
 </section>
-</div>
+</section>
 </div>
 
 

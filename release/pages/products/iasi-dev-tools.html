@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>iasi-tools-dev · IASI</title>
+<title>IASI Dev Tools</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -40,7 +40,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d35a639e3e1b3f229ca74f37e76bc102.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9cb7cb32b591cc9bfebfd21a1afee125.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No se han encontrado resultados",
@@ -275,65 +275,102 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="iasi-artifact-page iasi-artifact-publish">
 <div class="iasi-artifact-subnav">
-<p><a class="iasi-artifact-subnav-brand" href="index.html">iasi-tools-dev</a> <a href="#overview">Overview</a> <a href="#cycle">Ciclo</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-tools-dev-docs%2Fuser-guide%2F&amp;title=iasi-tools-dev User Guide">User Guide</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-tools-dev-docs%2Ftechnical-guide%2F&amp;title=iasi-tools-dev Technical Guide">Technical Guide</a> <a href="https://github.com/iasi-org-dev/iasi-tools-dev">Repository</a></p>
+<p><a class="iasi-artifact-subnav-brand" href="index.html">iasi-dev-tools</a> <a href="#overview">Overview</a> <a href="#architecture">Arquitectura</a> <a href="#workflow">Flujo</a> <a href="#materialize">Materialize</a> <a href="#infrastructure">Infraestructura</a> <a href="https://github.com/iasi-org-dev/iasi-dev-tools">Repository</a></p>
 </div>
-<div class="iasi-artifact-content">
-<div class="iasi-product-hero">
-<div class="iasi-product-kicker">
-<p>HERRAMIENTAS DE OPERACIÓN</p>
-</div>
-<section id="iasi-tools-dev-operaciones-coherentes-para-el-ecosistema" class="level1">
-<h1>IASI Tools Dev: Operaciones coherentes para el ecosistema</h1>
+<section id="iasi-dev-tools-ingeniería-y-operación-del-ecosistema" class="level1 iasi-artifact-content">
+<h1>IASI Dev Tools: Ingeniería y operación del ecosistema</h1>
 <div class="iasi-product-lead">
-<p>Una interfaz de línea de comandos para <strong>construir, publicar, desplegar y mantener</strong> los proyectos IASI de forma consistente.</p>
-</div>
-<div class="iasi-product-actions">
-<p><a class="iasi-product-action iasi-product-action-primary" href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-tools-dev-docs%2Fuser-guide%2F&amp;title=iasi-tools-dev User Guide">Abrir User Guide</a> <a class="iasi-product-action" href="https://github.com/iasi-org-dev/iasi-tools-dev">Ver repositorio ↗</a></p>
-</div>
-</section>
+<p><img src="../../resources/images/banner_under_construction_en.png" class="img-fluid"></p>
+<p>El conjunto de herramientas de desarrollo de IASI para <strong>descubrir proyectos, orquestar su ciclo de ingeniería, materializar organizaciones y automatizar infraestructura reproducible</strong>.</p>
 </div>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><code>iasi-tools-dev</code> reúne en el comando <code>iasi-dev</code> las operaciones habituales del ecosistema. Cada comando mantiene explícita su responsabilidad y permite aplicar el mismo flujo de trabajo a uno o varios repositorios.</p>
+<p><code>iasi-dev-tools</code> es el repositorio que reúne las herramientas utilizadas para construir, operar y evolucionar el ecosistema IASI.</p>
+<p>No define un único motor para todos los tipos de proyecto. Separa la <strong>orquestación</strong> de la <strong>ejecución concreta</strong>: <code>iasi-dev</code> descubre repositorios y proyectos, determina qué debe ejecutarse y en qué orden, y delega cada operación en el componente responsable del tipo de proyecto.</p>
+<p>La configuración propia de IASI se expresa en <strong>TOML</strong>. YAML se reserva para herramientas externas que lo requieran.</p>
+</section>
+<section id="architecture" class="level2">
+<h2 class="anchored" data-anchor-id="architecture">Arquitectura</h2>
 <div class="iasi-artifact-flow">
-<section id="build" class="level3 iasi-artifact-step">
-<h3 class="anchored" data-anchor-id="build">Build</h3>
-<p>Construye los proyectos y valida sus resultados.</p>
+<section id="iasi-dev" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="iasi-dev">iasi-dev</h3>
+<p>Descubre repositorios y proyectos IASI, resuelve los targets solicitados y orquesta operaciones y workflows.</p>
 </section>
-<section id="publish" class="level3 iasi-artifact-step">
-<h3 class="anchored" data-anchor-id="publish">Publish</h3>
-<p>Prepara los archivos que deben desplegarse.</p>
+<section id="engines" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="engines">Engines</h3>
+<p>Cada tipo de proyecto ejecuta su operación concreta mediante el componente correspondiente. Por ejemplo, <code>iasi-r</code> gestiona proyectos R y Quarto.</p>
 </section>
-<section id="deploy" class="level3 iasi-artifact-step">
-<h3 class="anchored" data-anchor-id="deploy">Deploy</h3>
-<p>Registra y sube la publicación; con <code>--full</code>, ejecuta el ciclo completo.</p>
+<section id="iasi-builder" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="iasi-builder">iasi-builder</h3>
+<p>Componente de construcción y generación actualmente estabilizado, sin ampliar responsabilidades mientras se consolida el flujo general.</p>
+</section>
+<section id="infrastructure-layer" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="infrastructure-layer">Infrastructure</h3>
+<p>Scripts y configuración reproducible para preparar el entorno IASI, incluidas las máquinas virtuales y servicios de infraestructura.</p>
 </section>
 </div>
+<p><code>iasi-dev</code> mantiene separados los argumentos solicitados por el usuario de los targets finalmente descubiertos. El discovery recorre los repositorios, identifica proyectos IASI por su configuración y deja que el tipo de proyecto determine la operación concreta.</p>
 </section>
-<section id="cycle" class="level2">
-<h2 class="anchored" data-anchor-id="cycle">Ciclo de trabajo</h2>
-<pre class="text"><code>iasi-dev build [repositorio...]
-iasi-dev publish [repositorio...]
-iasi-dev deploy [-f|--full] [-m "mensaje"] [repositorio...]</code></pre>
+<section id="workflow" class="level2">
+<h2 class="anchored" data-anchor-id="workflow">Flujo de trabajo</h2>
+<p>Las operaciones básicas siguen siendo independientes:</p>
+<pre class="text"><code>iasi-dev build   [target...]
+iasi-dev publish [target...]
+iasi-dev release [target...]
+iasi-dev commit</code></pre>
+<p>Los workflows encadenan esas operaciones cuando se necesita recorrer el ciclo completo:</p>
+<pre class="text"><code>iasi-dev workflow release -a</code></pre>
+<p>Con <code>-a</code>, el workflow de release ejecuta:</p>
+<pre class="text"><code>build  →  publish  →  release  →  commit</code></pre>
+<p>La orquestación se realiza <strong>proyecto a proyecto</strong>. <code>iasi-dev</code> decide el orden y el target; el engine correspondiente ejecuta la operación sobre ese proyecto.</p>
+<p><code>release</code> es una operación atómica. Los commits y el push no forman parte de <code>build</code>, <code>publish</code> o <code>release</code>; pertenecen al workflow o a las operaciones Git explícitas.</p>
+</section>
+<section id="materialize" class="level2">
+<h2 class="anchored" data-anchor-id="materialize">Materialize</h2>
+<p><code>materialize</code> crea una organización materializada a partir del estado activo de otra organización local:</p>
+<pre class="text"><code>iasi-dev materialize [-l] &lt;destino&gt; [origen]</code></pre>
+<p>El <strong>destino es obligatorio</strong>. Si se omite el origen, se utiliza la organización desde la que se ejecuta el comando.</p>
+<p>La materialización trabaja sobre el estado actual de los repositorios, no sobre un tag: copia el contenido, excluye el repositorio Git original, inicializa un nuevo repositorio, configura sus remotos y deja un único estado materializado coherente.</p>
+<p>Las rutas pueden ser relativas. <code>--path</code> pertenece al procesamiento global de la CLI y se resuelve antes de interpretar los argumentos del verbo.</p>
+<p>Con <code>-l</code>, la materialización permanece local y no continúa con la publicación remota.</p>
+</section>
+<section id="infrastructure" class="level2">
+<h2 class="anchored" data-anchor-id="infrastructure">Infraestructura</h2>
+<p><code>iasi-dev-tools</code> también contiene las herramientas de infraestructura necesarias para reproducir el entorno de desarrollo IASI.</p>
+<p>Los scripts de infraestructura se organizan por familia de entorno:</p>
+<ul>
+<li><code>bin/ps/</code>: scripts PowerShell para entornos <strong>Microsoft Windows</strong>, con funciones compartidas en <code>bin/ps/common/</code>.</li>
+<li><code>bin/sh/</code>: scripts de shell equivalentes para entornos *<strong>nix</strong>, con funciones compartidas en <code>bin/sh/common/</code>.</li>
+</ul>
+<p>Ambos directorios siguen el mismo modelo funcional, adaptado a las herramientas y convenciones propias de cada plataforma. La configuración propia se mantiene en TOML y los scripts específicos de una máquina o servicio conservan únicamente la configuración que les corresponde.</p>
+<p>Este nivel permite construir de forma reproducible elementos como la red privada IASI, las máquinas virtuales y su provisioning, sin mezclar esa responsabilidad con la lógica de los engines de proyecto.</p>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Recursos</h2>
 <div class="iasi-artifact-docs">
-<section id="user-guide" class="level3 iasi-artifact-doc">
-<h3 class="anchored" data-anchor-id="user-guide"><a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-tools-dev-docs%2Fuser-guide%2F&amp;title=iasi-tools-dev User Guide">User Guide</a></h3>
-<p>Instalación, comandos, opciones y flujos de trabajo de <code>iasi-dev</code>.</p>
+<section id="iasi-dev-1" class="level3 iasi-artifact-doc">
+<h3 class="anchored" data-anchor-id="iasi-dev-1"><code>iasi-dev</code></h3>
+<p>CLI de orquestación: discovery, targets, operaciones, workflows, materialización y coordinación entre repositorios.</p>
 </section>
-<section id="technical-guide" class="level3 iasi-artifact-doc">
-<h3 class="anchored" data-anchor-id="technical-guide"><a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-tools-dev-docs%2Ftechnical-guide%2F&amp;title=iasi-tools-dev Technical Guide">Technical Guide</a></h3>
-<p>Arquitectura, mantenimiento y evolución de las herramientas operativas.</p>
+<section id="iasi-builder-1" class="level3 iasi-artifact-doc">
+<h3 class="anchored" data-anchor-id="iasi-builder-1"><code>iasi-builder</code></h3>
+<p>Componente de construcción y generación mantenido dentro de <code>iasi-dev-tools</code>.</p>
+</section>
+<section id="binps" class="level3 iasi-artifact-doc">
+<h3 class="anchored" data-anchor-id="binps"><code>bin/ps</code></h3>
+<p>Scripts PowerShell para infraestructura en entornos Microsoft Windows, con utilidades compartidas en <code>bin/ps/common/</code>.</p>
+</section>
+<section id="binsh" class="level3 iasi-artifact-doc">
+<h3 class="anchored" data-anchor-id="binsh"><code>bin/sh</code></h3>
+<p>Scripts de shell equivalentes para infraestructura en entornos *nix, con utilidades compartidas en <code>bin/sh/common/</code>.</p>
 </section>
 <section id="repository" class="level3 iasi-artifact-doc">
-<h3 class="anchored" data-anchor-id="repository"><a href="https://github.com/iasi-org-dev/iasi-tools-dev">Repository</a></h3>
-<p>Código fuente y evolución pública de las herramientas de desarrollo.</p>
+<h3 class="anchored" data-anchor-id="repository"><a href="https://github.com/iasi-org-dev/iasi-dev-tools">Repository</a></h3>
+<p>Código fuente, herramientas, scripts, documentación y evolución pública de <code>iasi-dev-tools</code>.</p>
 </section>
 </div>
 </section>
-</div>
+</section>
 </div>
 
 

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>iasi-r · IASI</title>
+<title>IASI-R</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-d35a639e3e1b3f229ca74f37e76bc102.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-9cb7cb32b591cc9bfebfd21a1afee125.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "language": {
     "search-no-results-text": "No se han encontrado resultados",
@@ -312,20 +312,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="iasi-artifact-subnav">
 <p><a class="iasi-artifact-subnav-brand" href="index.html">iasi-r</a> <a href="#overview">Overview</a> <a href="#cycle">Ciclo</a> <a href="#model">Modelo</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-r%2Fuser-guide%2F&amp;title=iasi-r User Guide">User Guide</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-r%2Fdeveloper-guide%2F&amp;title=iasi-r Developer Guide">Developer Guide</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-r%2Ftechnical-guide%2F&amp;title=iasi-r Technical Guide">Technical Guide</a> <a href="https://github.com/iasi-org-dev/iasi-r">Repository</a></p>
 </div>
-<div class="iasi-artifact-content">
-<div class="iasi-product-hero">
-<div class="iasi-product-kicker">
-<p>INGENIERÍA PARA R Y QUARTO</p>
-</div>
-<section id="iasi-r-construcción-y-publicación-reproducible" class="level1">
+<section id="iasi-r-construcción-y-publicación-reproducible" class="level1 iasi-artifact-content">
 <h1>IASI R: Construcción y publicación reproducible</h1>
 <div class="iasi-product-lead">
+<p><img src="../../resources/images/banner_under_construction_en.png" class="img-fluid"></p>
 <p>El componente R de IASI para <strong>descubrir, validar, construir, publicar y reunir entregables</strong> manteniendo separadas las fuentes, los resultados de build, la publicación y la release.</p>
-</div>
-<div class="iasi-product-actions">
-<p><a class="iasi-product-action iasi-product-action-primary" href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-r%2Fuser-guide%2F&amp;title=iasi-r User Guide">Abrir User Guide</a> <a class="iasi-product-action" href="https://github.com/iasi-org-dev/iasi-r">Ver repositorio ↗</a></p>
-</div>
-</section>
 </div>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
@@ -366,19 +357,13 @@ release   → reunir entregables</code></pre>
 </section>
 <section id="model" class="level2">
 <h2 class="anchored" data-anchor-id="model">Modelo de materialización</h2>
-<pre class="text"><code>fuentes
-   ↓
-_outputs
-   ↓
-_publish
-   ↓
-release</code></pre>
+<p><img src="iasi-r_files/mediabag/plantuml/eab1b8a1efee8705bdfec739310b06aeeee368ee.png" class="img-fluid"></p>
 <p><code>iasi-r</code> mantiene estas materializaciones separadas para evitar que edición, construcción, publicación y entrega se mezclen en un único directorio o en una única operación.</p>
 <p>Para proyectos Quarto, la configuración IASI puede definir una estrategia de publicación dentro de <code>publication</code>:</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">type</span><span class="kw">:</span><span class="at"> quarto</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">publication</span><span class="kw">:</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">strategy</span><span class="kw">:</span><span class="at"> parted</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">type</span><span class="kw">:</span><span class="at"> quarto</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">publication</span><span class="kw">:</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">strategy</span><span class="kw">:</span><span class="at"> parted</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
 <p>Sin estrategia IASI, un proyecto <code>quarto</code> puede renderizarse como Quarto puro. Con estrategia, entra en el pipeline IASI de preparación, construcción y postprocesado.</p>
 </section>
 <section id="resources" class="level2">
@@ -402,7 +387,7 @@ release</code></pre>
 </section>
 </div>
 </section>
-</div>
+</section>
 </div>
 
 

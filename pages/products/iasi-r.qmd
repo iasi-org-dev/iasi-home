@@ -1,7 +1,8 @@
 ---
-pagetitle: "iasi-r · IASI"
+pagetitle: "IASI-R"
 lang: es
 ---
+
 
 ::::::::::::::::::: {.iasi-artifact-page .iasi-artifact-publish}
 ::: iasi-artifact-subnav
@@ -9,21 +10,16 @@ lang: es
 :::
 
 ::::::::::::::::: iasi-artifact-content
-:::::: iasi-product-hero
-::: iasi-product-kicker
-INGENIERÍA PARA R Y QUARTO
-:::
 
 # IASI R: Construcción y publicación reproducible
 
 ::: iasi-product-lead
+![](/resources/images/banner_under_construction_en.png)
+
 El componente R de IASI para **descubrir, validar, construir, publicar y reunir entregables** manteniendo separadas las fuentes, los resultados de build, la publicación y la release.
 :::
 
-::: iasi-product-actions
-<a class="iasi-product-action iasi-product-action-primary" href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-r%2Fuser-guide%2F&title=iasi-r%20User%20Guide">Abrir User Guide</a> <a class="iasi-product-action" href="https://github.com/iasi-org-dev/iasi-r">Ver repositorio ↗</a>
-:::
-::::::
+
 
 ## Overview {#overview}
 
@@ -81,14 +77,28 @@ El despliegue a sistemas externos queda fuera de `iasi-r`; herramientas de nivel
 
 ## Modelo de materialización {#model}
 
-``` text
-fuentes
-   ↓
-_outputs
-   ↓
-_publish
-   ↓
-release
+```{.plantuml}
+@startuml
+left to right direction
+
+skinparam shadowing false
+skinparam rectangle {
+    BackgroundColor #FFF4B8
+    BorderColor #666666
+}
+
+rectangle "fuentes" as sources
+rectangle "_outputs" as outputs
+rectangle "_publish" as publish
+rectangle "release" as release
+cloud "remoto" as remote
+
+sources --> outputs
+outputs --> publish
+publish --> release
+release --> remote
+
+@enduml
 ```
 
 `iasi-r` mantiene estas materializaciones separadas para evitar que edición, construcción, publicación y entrega se mezclen en un único directorio o en una única operación.
