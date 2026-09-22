@@ -70,25 +70,67 @@
     "text": "Artefactos IASI Tools Dev IASI RStudio\n\n\nArtefactos IASI\nLos artefactos sostienen el trabajo cotidiano del ecosistema IASI. Preparan el entorno y ofrecen las herramientas necesarias para desarrollar, probar y operar sus productos.\nA diferencia de los subproductos, no nacen para convertirse en soluciones públicas con identidad y ciclo de vida propios. Son elementos vinculados al funcionamiento interno del ecosistema y a la ingeniería que hace posible construirlo de manera consistente.\n\nLos subproductos reutilizan soluciones. Los artefactos sostienen el entorno en el que esas soluciones se desarrollan.\n\n\n\nOPERAR\n\niasi-tools-dev\nHerramientas y comandos de soporte que simplifican las operaciones habituales del ecosistema IASI y unifican su forma de trabajo.\n\n\n\nDESARROLLAR\n\niasi-rstudio\nEntorno de trabajo preparado para desarrollar y validar publicaciones y productos del ecosistema IASI con RStudio."
   },
   {
-    "objectID": "pages/products/iasi-rstudio.html",
-    "href": "pages/products/iasi-rstudio.html",
-    "title": "IASI RStudio: El ecosistema IASI dentro de RStudio",
+    "objectID": "pages/products/iasi-r.html",
+    "href": "pages/products/iasi-r.html",
+    "title": "IASI R: Construcción y publicación reproducible",
     "section": "",
-    "text": "iasi-rstudio Overview Documentación prevista Repository\n\n\n\n\nENTORNO DE DESARROLLO\n\n\n\n\nUn addin que acerca las operaciones y herramientas de IASI al entorno habitual de trabajo con RStudio.\n\n\nDocumentación prevista Ver repositorio ↗\n\n\n\n\n\niasi-rstudio proporciona una integración específica para utilizar capacidades del ecosistema IASI desde RStudio. Su interfaz permite incorporarlas al flujo de desarrollo sin depender exclusivamente de la línea de comandos.\n\n\n\n\n\n\nLa documentación de instalación, configuración y uso del addin todavía no está publicada.\n\n\n\nCódigo fuente y evolución pública de la integración."
+    "text": "iasi-r Overview Ciclo Modelo User Guide Developer Guide Technical Guide Repository\n\n\n\n\nINGENIERÍA PARA R Y QUARTO\n\n\n\n\nEl componente R de IASI para descubrir, validar, construir, publicar y reunir entregables manteniendo separadas las fuentes, los resultados de build, la publicación y la release.\n\n\nAbrir User Guide Ver repositorio ↗\n\n\n\n\n\niasi-r es el componente del ecosistema IASI dedicado al entorno R. Su paquete iasi coordina proyectos Quarto y paquetes R mediante una API pequeña y explícita.\nNació como iasi-quarto, centrado en ingeniería documental sobre Quarto. Al ampliar su responsabilidad al ciclo de construcción, publicación y release de proyectos R, evoluciona a iasi-r.\nNo sustituye a Quarto ni oculta su configuración. Añade por encima un ciclo de ingeniería común para que cada fase tenga una responsabilidad clara.\n\n\n\nComprueba configuración, estructura e invariantes antes de construir.\n\n\n\nConstruye publicaciones Quarto y artefactos de paquetes R.\n\n\n\nMaterializa una publicación local a partir de resultados ya construidos.\n\n\n\nReúne los entregables locales preparados para consumo externo.\n\n\n\n\n\niasi::validate()\niasi::build()\niasi::publish()\niasi::release()\nCada operación es deliberadamente independiente:\nvalidate  → comprobar\nbuild     → construir\npublish   → preparar publicación local\nrelease   → reunir entregables\nEl despliegue a sistemas externos queda fuera de iasi-r; herramientas de nivel superior, como iasi-dev, pueden consumir la release y continuar el ciclo.\n\n\n\nfuentes\n   ↓\n_outputs\n   ↓\n_publish\n   ↓\nrelease\niasi-r mantiene estas materializaciones separadas para evitar que edición, construcción, publicación y entrega se mezclen en un único directorio o en una única operación.\nPara proyectos Quarto, la configuración IASI puede definir una estrategia de publicación dentro de publication:\ntype: quarto\n\npublication:\n  strategy: parted\nSin estrategia IASI, un proyecto quarto puede renderizarse como Quarto puro. Con estrategia, entra en el pipeline IASI de preparación, construcción y postprocesado.\n\n\n\n\n\n\nUso del paquete iasi, configuración de proyectos y ciclo validate → build → publish → release.\n\n\n\nPrincipios de diseño, responsabilidades y criterios para mantener y evolucionar iasi-r.\n\n\n\nArquitectura interna, motores, configuración, materialización y contratos técnicos.\n\n\n\nCódigo fuente, paquete R, documentación y evolución pública de iasi-r."
   },
   {
-    "objectID": "pages/products/iasi-rstudio.html#overview",
-    "href": "pages/products/iasi-rstudio.html#overview",
-    "title": "IASI RStudio: El ecosistema IASI dentro de RStudio",
+    "objectID": "pages/products/iasi-r.html#overview",
+    "href": "pages/products/iasi-r.html#overview",
+    "title": "IASI R: Construcción y publicación reproducible",
     "section": "",
-    "text": "iasi-rstudio proporciona una integración específica para utilizar capacidades del ecosistema IASI desde RStudio. Su interfaz permite incorporarlas al flujo de desarrollo sin depender exclusivamente de la línea de comandos."
+    "text": "iasi-r es el componente del ecosistema IASI dedicado al entorno R. Su paquete iasi coordina proyectos Quarto y paquetes R mediante una API pequeña y explícita.\nNació como iasi-quarto, centrado en ingeniería documental sobre Quarto. Al ampliar su responsabilidad al ciclo de construcción, publicación y release de proyectos R, evoluciona a iasi-r.\nNo sustituye a Quarto ni oculta su configuración. Añade por encima un ciclo de ingeniería común para que cada fase tenga una responsabilidad clara.\n\n\n\nComprueba configuración, estructura e invariantes antes de construir.\n\n\n\nConstruye publicaciones Quarto y artefactos de paquetes R.\n\n\n\nMaterializa una publicación local a partir de resultados ya construidos.\n\n\n\nReúne los entregables locales preparados para consumo externo."
   },
   {
-    "objectID": "pages/products/iasi-rstudio.html#resources",
-    "href": "pages/products/iasi-rstudio.html#resources",
-    "title": "IASI RStudio: El ecosistema IASI dentro de RStudio",
+    "objectID": "pages/products/iasi-r.html#cycle",
+    "href": "pages/products/iasi-r.html#cycle",
+    "title": "IASI R: Construcción y publicación reproducible",
     "section": "",
-    "text": "La documentación de instalación, configuración y uso del addin todavía no está publicada.\n\n\n\nCódigo fuente y evolución pública de la integración."
+    "text": "iasi::validate()\niasi::build()\niasi::publish()\niasi::release()\nCada operación es deliberadamente independiente:\nvalidate  → comprobar\nbuild     → construir\npublish   → preparar publicación local\nrelease   → reunir entregables\nEl despliegue a sistemas externos queda fuera de iasi-r; herramientas de nivel superior, como iasi-dev, pueden consumir la release y continuar el ciclo."
+  },
+  {
+    "objectID": "pages/products/iasi-r.html#model",
+    "href": "pages/products/iasi-r.html#model",
+    "title": "IASI R: Construcción y publicación reproducible",
+    "section": "",
+    "text": "fuentes\n   ↓\n_outputs\n   ↓\n_publish\n   ↓\nrelease\niasi-r mantiene estas materializaciones separadas para evitar que edición, construcción, publicación y entrega se mezclen en un único directorio o en una única operación.\nPara proyectos Quarto, la configuración IASI puede definir una estrategia de publicación dentro de publication:\ntype: quarto\n\npublication:\n  strategy: parted\nSin estrategia IASI, un proyecto quarto puede renderizarse como Quarto puro. Con estrategia, entra en el pipeline IASI de preparación, construcción y postprocesado."
+  },
+  {
+    "objectID": "pages/products/iasi-r.html#resources",
+    "href": "pages/products/iasi-r.html#resources",
+    "title": "IASI R: Construcción y publicación reproducible",
+    "section": "",
+    "text": "Uso del paquete iasi, configuración de proyectos y ciclo validate → build → publish → release.\n\n\n\nPrincipios de diseño, responsabilidades y criterios para mantener y evolucionar iasi-r.\n\n\n\nArquitectura interna, motores, configuración, materialización y contratos técnicos.\n\n\n\nCódigo fuente, paquete R, documentación y evolución pública de iasi-r."
+  },
+  {
+    "objectID": "pages/products/iasi-dev-tools.html",
+    "href": "pages/products/iasi-dev-tools.html",
+    "title": "IASI Tools Dev: Operaciones coherentes para el ecosistema",
+    "section": "",
+    "text": "iasi-tools-dev Overview Ciclo User Guide Technical Guide Repository\n\n\n\n\nHERRAMIENTAS DE OPERACIÓN\n\n\n\n\nUna interfaz de línea de comandos para construir, publicar, desplegar y mantener los proyectos IASI de forma consistente.\n\n\nAbrir User Guide Ver repositorio ↗\n\n\n\n\n\niasi-tools-dev reúne en el comando iasi-dev las operaciones habituales del ecosistema. Cada comando mantiene explícita su responsabilidad y permite aplicar el mismo flujo de trabajo a uno o varios repositorios.\n\n\n\nConstruye los proyectos y valida sus resultados.\n\n\n\nPrepara los archivos que deben desplegarse.\n\n\n\nRegistra y sube la publicación; con --full, ejecuta el ciclo completo.\n\n\n\n\n\niasi-dev build [repositorio...]\niasi-dev publish [repositorio...]\niasi-dev deploy [-f|--full] [-m \"mensaje\"] [repositorio...]\n\n\n\n\n\n\nInstalación, comandos, opciones y flujos de trabajo de iasi-dev.\n\n\n\nArquitectura, mantenimiento y evolución de las herramientas operativas.\n\n\n\nCódigo fuente y evolución pública de las herramientas de desarrollo."
+  },
+  {
+    "objectID": "pages/products/iasi-dev-tools.html#overview",
+    "href": "pages/products/iasi-dev-tools.html#overview",
+    "title": "IASI Tools Dev: Operaciones coherentes para el ecosistema",
+    "section": "",
+    "text": "iasi-tools-dev reúne en el comando iasi-dev las operaciones habituales del ecosistema. Cada comando mantiene explícita su responsabilidad y permite aplicar el mismo flujo de trabajo a uno o varios repositorios.\n\n\n\nConstruye los proyectos y valida sus resultados.\n\n\n\nPrepara los archivos que deben desplegarse.\n\n\n\nRegistra y sube la publicación; con --full, ejecuta el ciclo completo."
+  },
+  {
+    "objectID": "pages/products/iasi-dev-tools.html#cycle",
+    "href": "pages/products/iasi-dev-tools.html#cycle",
+    "title": "IASI Tools Dev: Operaciones coherentes para el ecosistema",
+    "section": "",
+    "text": "iasi-dev build [repositorio...]\niasi-dev publish [repositorio...]\niasi-dev deploy [-f|--full] [-m \"mensaje\"] [repositorio...]"
+  },
+  {
+    "objectID": "pages/products/iasi-dev-tools.html#resources",
+    "href": "pages/products/iasi-dev-tools.html#resources",
+    "title": "IASI Tools Dev: Operaciones coherentes para el ecosistema",
+    "section": "",
+    "text": "Instalación, comandos, opciones y flujos de trabajo de iasi-dev.\n\n\n\nArquitectura, mantenimiento y evolución de las herramientas operativas.\n\n\n\nCódigo fuente y evolución pública de las herramientas de desarrollo."
   },
   {
     "objectID": "pages/methodology/index.html",
@@ -441,32 +483,67 @@
     "text": "Agentics define cómo participan los agentes en la ingeniería, no cómo funciona una herramienta concreta.\n\nLa metodología debe poder evolucionar independientemente de los modelos, proveedores y plataformas que utilicemos para ejecutarla."
   },
   {
-    "objectID": "pages/products/iasi-tools-dev.html",
-    "href": "pages/products/iasi-tools-dev.html",
-    "title": "IASI Tools Dev: Operaciones coherentes para el ecosistema",
+    "objectID": "pages/products/iasi-lua.html",
+    "href": "pages/products/iasi-lua.html",
+    "title": "IASI Lua: Capacidades reutilizables dentro de Quarto",
     "section": "",
-    "text": "iasi-tools-dev Overview Ciclo User Guide Technical Guide Repository\n\n\n\n\nHERRAMIENTAS DE OPERACIÓN\n\n\n\n\nUna interfaz de línea de comandos para construir, publicar, desplegar y mantener los proyectos IASI de forma consistente.\n\n\nAbrir User Guide Ver repositorio ↗\n\n\n\n\n\niasi-tools-dev reúne en el comando iasi-dev las operaciones habituales del ecosistema. Cada comando mantiene explícita su responsabilidad y permite aplicar el mismo flujo de trabajo a uno o varios repositorios.\n\n\n\nConstruye los proyectos y valida sus resultados.\n\n\n\nPrepara los archivos que deben desplegarse.\n\n\n\nRegistra y sube la publicación; con --full, ejecuta el ciclo completo.\n\n\n\n\n\niasi-dev build [repositorio...]\niasi-dev publish [repositorio...]\niasi-dev deploy [-f|--full] [-m \"mensaje\"] [repositorio...]\n\n\n\n\n\n\nInstalación, comandos, opciones y flujos de trabajo de iasi-dev.\n\n\n\nArquitectura, mantenimiento y evolución de las herramientas operativas.\n\n\n\nCódigo fuente y evolución pública de las herramientas de desarrollo."
+    "text": "iasi-lua Overview Extensiones Ciclo Modelo User Guide Technical Guide Repository\n\n\n\n\nEXTENSIONES LUA PARA QUARTO\n\n\n\n\nLa plataforma Lua de IASI para extender el renderizado de Quarto con capacidades especializadas, compartiendo un núcleo común y generando extensiones autónomas para los proyectos consumidores.\n\n\nAbrir User Guide Ver repositorio ↗\n\n\n\n\n\niasi-lua reúne las extensiones Lua de IASI para Quarto. La fuente se organiza alrededor de un core compartido y de directorios independientes por extensión; el build materializa distribuciones Quarto autocontenidas bajo _extensions/.\nLa regla es sencilla: la fuente se mantiene una vez y la distribución se genera. Los proyectos consumidores instalan y cargan las extensiones resultantes sin depender de la estructura interna del repositorio.\n\n\n\nProporciona infraestructura común de configuración, motor, caché, filesystem, metadatos y mediabag.\n\n\n\nCada capacidad mantiene únicamente su lógica específica y su manifiesto Quarto.\n\n\n\nCombina el core y la extensión para producir una distribución autónoma.\n\n\n\nQuarto carga la extensión generada como un filtro normal dentro del proyecto.\n\n\n\n\n\n\n\n\nConvierte diagramas PlantUML escritos como código en imágenes integradas durante el renderizado.\nfilters:\n  - iasi-plantuml\nIncluye configuración del servidor, formato de salida, caché y estilos compartidos.\n\n\n\nIntegra aplicaciones Shiny para R en publicaciones HTML estáticas mediante Shinylive y webR.\nfilters:\n  - iasi-shiny\nPermite incorporar bloques interactivos sin convertir la publicación completa en un servidor Shiny.\n\n\n\n\n\nToda la automatización del proyecto se mantiene en Bash.\ncore/ + extensión\n       ↓\n./scripts/build-all.sh\n       ↓\n_extensions/\n       ↓\n./scripts/check-generated.sh\n./scripts/check-versions.sh\n./scripts/test-all.sh\n       ↓\n./scripts/install-local.sh &lt;proyecto&gt;\n       ↓\nproyecto Quarto consumidor\nTambién puede construirse una única extensión:\n./scripts/build-extension.sh plantuml\nEn Windows, este ciclo se ejecuta desde WSL u otro entorno Bash compatible.\n\n\n\nsoftware/iasi-lua/\n├── core/                 plataforma Lua compartida\n├── plantuml/             fuente de IASI PlantUML\n├── shiny/                fuente de IASI Shiny\n├── scripts/              automatización de build, checks y tests\n└── _extensions/          distribuciones Quarto generadas\n    ├── iasi-plantuml/\n    └── iasi-shiny/\n_extensions/ no es fuente de desarrollo. No se edita manualmente: cada distribución se vuelve a materializar desde core/ y desde el directorio fuente de su extensión.\nEse límite mantiene separadas dos responsabilidades:\nfuente mantenible\n      ↓ build\ndistribución instalable\n\n\n\n\n\n\nInstalación y uso de las extensiones desde proyectos Quarto consumidores.\n\n\n\nArquitectura Lua, core compartido, desarrollo de extensiones y proceso de distribución.\n\n\n\nEstructura del core, responsabilidades internas y modelo de generación de _extensions/.\n\n\n\nCódigo fuente, extensiones, automatización, documentación y evolución de iasi-lua."
   },
   {
-    "objectID": "pages/products/iasi-tools-dev.html#overview",
-    "href": "pages/products/iasi-tools-dev.html#overview",
-    "title": "IASI Tools Dev: Operaciones coherentes para el ecosistema",
+    "objectID": "pages/products/iasi-lua.html#overview",
+    "href": "pages/products/iasi-lua.html#overview",
+    "title": "IASI Lua: Capacidades reutilizables dentro de Quarto",
     "section": "",
-    "text": "iasi-tools-dev reúne en el comando iasi-dev las operaciones habituales del ecosistema. Cada comando mantiene explícita su responsabilidad y permite aplicar el mismo flujo de trabajo a uno o varios repositorios.\n\n\n\nConstruye los proyectos y valida sus resultados.\n\n\n\nPrepara los archivos que deben desplegarse.\n\n\n\nRegistra y sube la publicación; con --full, ejecuta el ciclo completo."
+    "text": "iasi-lua reúne las extensiones Lua de IASI para Quarto. La fuente se organiza alrededor de un core compartido y de directorios independientes por extensión; el build materializa distribuciones Quarto autocontenidas bajo _extensions/.\nLa regla es sencilla: la fuente se mantiene una vez y la distribución se genera. Los proyectos consumidores instalan y cargan las extensiones resultantes sin depender de la estructura interna del repositorio.\n\n\n\nProporciona infraestructura común de configuración, motor, caché, filesystem, metadatos y mediabag.\n\n\n\nCada capacidad mantiene únicamente su lógica específica y su manifiesto Quarto.\n\n\n\nCombina el core y la extensión para producir una distribución autónoma.\n\n\n\nQuarto carga la extensión generada como un filtro normal dentro del proyecto."
   },
   {
-    "objectID": "pages/products/iasi-tools-dev.html#cycle",
-    "href": "pages/products/iasi-tools-dev.html#cycle",
-    "title": "IASI Tools Dev: Operaciones coherentes para el ecosistema",
+    "objectID": "pages/products/iasi-lua.html#extensions",
+    "href": "pages/products/iasi-lua.html#extensions",
+    "title": "IASI Lua: Capacidades reutilizables dentro de Quarto",
     "section": "",
-    "text": "iasi-dev build [repositorio...]\niasi-dev publish [repositorio...]\niasi-dev deploy [-f|--full] [-m \"mensaje\"] [repositorio...]"
+    "text": "Convierte diagramas PlantUML escritos como código en imágenes integradas durante el renderizado.\nfilters:\n  - iasi-plantuml\nIncluye configuración del servidor, formato de salida, caché y estilos compartidos.\n\n\n\nIntegra aplicaciones Shiny para R en publicaciones HTML estáticas mediante Shinylive y webR.\nfilters:\n  - iasi-shiny\nPermite incorporar bloques interactivos sin convertir la publicación completa en un servidor Shiny."
   },
   {
-    "objectID": "pages/products/iasi-tools-dev.html#resources",
-    "href": "pages/products/iasi-tools-dev.html#resources",
-    "title": "IASI Tools Dev: Operaciones coherentes para el ecosistema",
+    "objectID": "pages/products/iasi-lua.html#cycle",
+    "href": "pages/products/iasi-lua.html#cycle",
+    "title": "IASI Lua: Capacidades reutilizables dentro de Quarto",
     "section": "",
-    "text": "Instalación, comandos, opciones y flujos de trabajo de iasi-dev.\n\n\n\nArquitectura, mantenimiento y evolución de las herramientas operativas.\n\n\n\nCódigo fuente y evolución pública de las herramientas de desarrollo."
+    "text": "Toda la automatización del proyecto se mantiene en Bash.\ncore/ + extensión\n       ↓\n./scripts/build-all.sh\n       ↓\n_extensions/\n       ↓\n./scripts/check-generated.sh\n./scripts/check-versions.sh\n./scripts/test-all.sh\n       ↓\n./scripts/install-local.sh &lt;proyecto&gt;\n       ↓\nproyecto Quarto consumidor\nTambién puede construirse una única extensión:\n./scripts/build-extension.sh plantuml\nEn Windows, este ciclo se ejecuta desde WSL u otro entorno Bash compatible."
+  },
+  {
+    "objectID": "pages/products/iasi-lua.html#model",
+    "href": "pages/products/iasi-lua.html#model",
+    "title": "IASI Lua: Capacidades reutilizables dentro de Quarto",
+    "section": "",
+    "text": "software/iasi-lua/\n├── core/                 plataforma Lua compartida\n├── plantuml/             fuente de IASI PlantUML\n├── shiny/                fuente de IASI Shiny\n├── scripts/              automatización de build, checks y tests\n└── _extensions/          distribuciones Quarto generadas\n    ├── iasi-plantuml/\n    └── iasi-shiny/\n_extensions/ no es fuente de desarrollo. No se edita manualmente: cada distribución se vuelve a materializar desde core/ y desde el directorio fuente de su extensión.\nEse límite mantiene separadas dos responsabilidades:\nfuente mantenible\n      ↓ build\ndistribución instalable"
+  },
+  {
+    "objectID": "pages/products/iasi-lua.html#resources",
+    "href": "pages/products/iasi-lua.html#resources",
+    "title": "IASI Lua: Capacidades reutilizables dentro de Quarto",
+    "section": "",
+    "text": "Instalación y uso de las extensiones desde proyectos Quarto consumidores.\n\n\n\nArquitectura Lua, core compartido, desarrollo de extensiones y proceso de distribución.\n\n\n\nEstructura del core, responsabilidades internas y modelo de generación de _extensions/.\n\n\n\nCódigo fuente, extensiones, automatización, documentación y evolución de iasi-lua."
+  },
+  {
+    "objectID": "pages/products/iasi-rstudio.html",
+    "href": "pages/products/iasi-rstudio.html",
+    "title": "IASI RStudio: El ecosistema IASI dentro de RStudio",
+    "section": "",
+    "text": "iasi-rstudio Overview Documentación prevista Repository\n\n\n\n\nENTORNO DE DESARROLLO\n\n\n\n\nUn addin que acerca las operaciones y herramientas de IASI al entorno habitual de trabajo con RStudio.\n\n\nDocumentación prevista Ver repositorio ↗\n\n\n\n\n\niasi-rstudio proporciona una integración específica para utilizar capacidades del ecosistema IASI desde RStudio. Su interfaz permite incorporarlas al flujo de desarrollo sin depender exclusivamente de la línea de comandos.\n\n\n\n\n\n\nLa documentación de instalación, configuración y uso del addin todavía no está publicada.\n\n\n\nCódigo fuente y evolución pública de la integración."
+  },
+  {
+    "objectID": "pages/products/iasi-rstudio.html#overview",
+    "href": "pages/products/iasi-rstudio.html#overview",
+    "title": "IASI RStudio: El ecosistema IASI dentro de RStudio",
+    "section": "",
+    "text": "iasi-rstudio proporciona una integración específica para utilizar capacidades del ecosistema IASI desde RStudio. Su interfaz permite incorporarlas al flujo de desarrollo sin depender exclusivamente de la línea de comandos."
+  },
+  {
+    "objectID": "pages/products/iasi-rstudio.html#resources",
+    "href": "pages/products/iasi-rstudio.html#resources",
+    "title": "IASI RStudio: El ecosistema IASI dentro de RStudio",
+    "section": "",
+    "text": "La documentación de instalación, configuración y uso del addin todavía no está publicada.\n\n\n\nCódigo fuente y evolución pública de la integración."
   },
   {
     "objectID": "pages/status/to-be-done.html",

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>iasi-tools-dev · IASI</title>
+<title>iasi-r · IASI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -25,6 +25,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -127,20 +162,20 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Todos</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../pages/status/under-construction.html">
- <span class="dropdown-text">IASI Quarto</span></a>
+    <a class="dropdown-item" href="../../pages/products/iasi-r.html">
+ <span class="dropdown-text">IASI R</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../pages/status/under-construction.html">
- <span class="dropdown-text">IASI Lua</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../pages/products/iasi-tools-dev.html">
- <span class="dropdown-text">IASI Tools Dev</span></a>
+    <a class="dropdown-item" href="../../pages/products/iasi-dev-tools.html">
+ <span class="dropdown-text">IASI Dev Tools</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../../pages/products/iasi-rstudio.html">
  <span class="dropdown-text">IASI RStudio</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../pages/products/iasi-lua.html">
+ <span class="dropdown-text">IASI Lua</span></a>
   </li>  
     </ul>
   </li>
@@ -275,61 +310,95 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="iasi-artifact-page iasi-artifact-publish">
 <div class="iasi-artifact-subnav">
-<p><a class="iasi-artifact-subnav-brand" href="index.html">iasi-tools-dev</a> <a href="#overview">Overview</a> <a href="#cycle">Ciclo</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-tools-dev-docs%2Fuser-guide%2F&amp;title=iasi-tools-dev User Guide">User Guide</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-tools-dev-docs%2Ftechnical-guide%2F&amp;title=iasi-tools-dev Technical Guide">Technical Guide</a> <a href="https://github.com/iasi-org-dev/iasi-tools-dev">Repository</a></p>
+<p><a class="iasi-artifact-subnav-brand" href="index.html">iasi-r</a> <a href="#overview">Overview</a> <a href="#cycle">Ciclo</a> <a href="#model">Modelo</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-r%2Fuser-guide%2F&amp;title=iasi-r User Guide">User Guide</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-r%2Fdeveloper-guide%2F&amp;title=iasi-r Developer Guide">Developer Guide</a> <a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-r%2Ftechnical-guide%2F&amp;title=iasi-r Technical Guide">Technical Guide</a> <a href="https://github.com/iasi-org-dev/iasi-r">Repository</a></p>
 </div>
 <div class="iasi-artifact-content">
 <div class="iasi-product-hero">
 <div class="iasi-product-kicker">
-<p>HERRAMIENTAS DE OPERACIÓN</p>
+<p>INGENIERÍA PARA R Y QUARTO</p>
 </div>
-<section id="iasi-tools-dev-operaciones-coherentes-para-el-ecosistema" class="level1">
-<h1>IASI Tools Dev: Operaciones coherentes para el ecosistema</h1>
+<section id="iasi-r-construcción-y-publicación-reproducible" class="level1">
+<h1>IASI R: Construcción y publicación reproducible</h1>
 <div class="iasi-product-lead">
-<p>Una interfaz de línea de comandos para <strong>construir, publicar, desplegar y mantener</strong> los proyectos IASI de forma consistente.</p>
+<p>El componente R de IASI para <strong>descubrir, validar, construir, publicar y reunir entregables</strong> manteniendo separadas las fuentes, los resultados de build, la publicación y la release.</p>
 </div>
 <div class="iasi-product-actions">
-<p><a class="iasi-product-action iasi-product-action-primary" href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-tools-dev-docs%2Fuser-guide%2F&amp;title=iasi-tools-dev User Guide">Abrir User Guide</a> <a class="iasi-product-action" href="https://github.com/iasi-org-dev/iasi-tools-dev">Ver repositorio ↗</a></p>
+<p><a class="iasi-product-action iasi-product-action-primary" href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-r%2Fuser-guide%2F&amp;title=iasi-r User Guide">Abrir User Guide</a> <a class="iasi-product-action" href="https://github.com/iasi-org-dev/iasi-r">Ver repositorio ↗</a></p>
 </div>
 </section>
 </div>
 <section id="overview" class="level2">
 <h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p><code>iasi-tools-dev</code> reúne en el comando <code>iasi-dev</code> las operaciones habituales del ecosistema. Cada comando mantiene explícita su responsabilidad y permite aplicar el mismo flujo de trabajo a uno o varios repositorios.</p>
+<p><code>iasi-r</code> es el componente del ecosistema IASI dedicado al entorno R. Su paquete <code>iasi</code> coordina proyectos Quarto y paquetes R mediante una API pequeña y explícita.</p>
+<p>Nació como <strong>iasi-quarto</strong>, centrado en ingeniería documental sobre Quarto. Al ampliar su responsabilidad al ciclo de construcción, publicación y release de proyectos R, evoluciona a <strong>iasi-r</strong>.</p>
+<p>No sustituye a Quarto ni oculta su configuración. Añade por encima un ciclo de ingeniería común para que cada fase tenga una responsabilidad clara.</p>
 <div class="iasi-artifact-flow">
+<section id="validate" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="validate">Validate</h3>
+<p>Comprueba configuración, estructura e invariantes antes de construir.</p>
+</section>
 <section id="build" class="level3 iasi-artifact-step">
 <h3 class="anchored" data-anchor-id="build">Build</h3>
-<p>Construye los proyectos y valida sus resultados.</p>
+<p>Construye publicaciones Quarto y artefactos de paquetes R.</p>
 </section>
 <section id="publish" class="level3 iasi-artifact-step">
 <h3 class="anchored" data-anchor-id="publish">Publish</h3>
-<p>Prepara los archivos que deben desplegarse.</p>
+<p>Materializa una publicación local a partir de resultados ya construidos.</p>
 </section>
-<section id="deploy" class="level3 iasi-artifact-step">
-<h3 class="anchored" data-anchor-id="deploy">Deploy</h3>
-<p>Registra y sube la publicación; con <code>--full</code>, ejecuta el ciclo completo.</p>
+<section id="release" class="level3 iasi-artifact-step">
+<h3 class="anchored" data-anchor-id="release">Release</h3>
+<p>Reúne los entregables locales preparados para consumo externo.</p>
 </section>
 </div>
 </section>
 <section id="cycle" class="level2">
 <h2 class="anchored" data-anchor-id="cycle">Ciclo de trabajo</h2>
-<pre class="text"><code>iasi-dev build [repositorio...]
-iasi-dev publish [repositorio...]
-iasi-dev deploy [-f|--full] [-m "mensaje"] [repositorio...]</code></pre>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>iasi<span class="sc">::</span><span class="fu">validate</span>()</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>iasi<span class="sc">::</span><span class="fu">build</span>()</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>iasi<span class="sc">::</span><span class="fu">publish</span>()</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>iasi<span class="sc">::</span><span class="fu">release</span>()</span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Cada operación es deliberadamente independiente:</p>
+<pre class="text"><code>validate  → comprobar
+build     → construir
+publish   → preparar publicación local
+release   → reunir entregables</code></pre>
+<p>El despliegue a sistemas externos queda fuera de <code>iasi-r</code>; herramientas de nivel superior, como <code>iasi-dev</code>, pueden consumir la release y continuar el ciclo.</p>
+</section>
+<section id="model" class="level2">
+<h2 class="anchored" data-anchor-id="model">Modelo de materialización</h2>
+<pre class="text"><code>fuentes
+   ↓
+_outputs
+   ↓
+_publish
+   ↓
+release</code></pre>
+<p><code>iasi-r</code> mantiene estas materializaciones separadas para evitar que edición, construcción, publicación y entrega se mezclen en un único directorio o en una única operación.</p>
+<p>Para proyectos Quarto, la configuración IASI puede definir una estrategia de publicación dentro de <code>publication</code>:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode yaml code-with-copy"><code class="sourceCode yaml"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">type</span><span class="kw">:</span><span class="at"> quarto</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="fu">publication</span><span class="kw">:</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="at">  </span><span class="fu">strategy</span><span class="kw">:</span><span class="at"> parted</span></span></code></pre></div><button title="Copiar al portapapeles" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Sin estrategia IASI, un proyecto <code>quarto</code> puede renderizarse como Quarto puro. Con estrategia, entra en el pipeline IASI de preparación, construcción y postprocesado.</p>
 </section>
 <section id="resources" class="level2">
 <h2 class="anchored" data-anchor-id="resources">Recursos</h2>
 <div class="iasi-artifact-docs">
 <section id="user-guide" class="level3 iasi-artifact-doc">
-<h3 class="anchored" data-anchor-id="user-guide"><a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-tools-dev-docs%2Fuser-guide%2F&amp;title=iasi-tools-dev User Guide">User Guide</a></h3>
-<p>Instalación, comandos, opciones y flujos de trabajo de <code>iasi-dev</code>.</p>
+<h3 class="anchored" data-anchor-id="user-guide"><a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-r%2Fuser-guide%2F&amp;title=iasi-r User Guide">User Guide</a></h3>
+<p>Uso del paquete <code>iasi</code>, configuración de proyectos y ciclo <code>validate → build → publish → release</code>.</p>
+</section>
+<section id="developer-guide" class="level3 iasi-artifact-doc">
+<h3 class="anchored" data-anchor-id="developer-guide"><a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-r%2Fdeveloper-guide%2F&amp;title=iasi-r Developer Guide">Developer Guide</a></h3>
+<p>Principios de diseño, responsabilidades y criterios para mantener y evolucionar <code>iasi-r</code>.</p>
 </section>
 <section id="technical-guide" class="level3 iasi-artifact-doc">
-<h3 class="anchored" data-anchor-id="technical-guide"><a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-tools-dev-docs%2Ftechnical-guide%2F&amp;title=iasi-tools-dev Technical Guide">Technical Guide</a></h3>
-<p>Arquitectura, mantenimiento y evolución de las herramientas operativas.</p>
+<h3 class="anchored" data-anchor-id="technical-guide"><a href="../viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-r%2Ftechnical-guide%2F&amp;title=iasi-r Technical Guide">Technical Guide</a></h3>
+<p>Arquitectura interna, motores, configuración, materialización y contratos técnicos.</p>
 </section>
 <section id="repository" class="level3 iasi-artifact-doc">
-<h3 class="anchored" data-anchor-id="repository"><a href="https://github.com/iasi-org-dev/iasi-tools-dev">Repository</a></h3>
-<p>Código fuente y evolución pública de las herramientas de desarrollo.</p>
+<h3 class="anchored" data-anchor-id="repository"><a href="https://github.com/iasi-org-dev/iasi-r">Repository</a></h3>
+<p>Código fuente, paquete R, documentación y evolución pública de <code>iasi-r</code>.</p>
 </section>
 </div>
 </section>
@@ -746,7 +815,7 @@ iasi-dev deploy [-f|--full] [-m "mensaje"] [repositorio...]</code></pre>
 <p>© 2026 Javier G. Grandez</p>
 </div>   
     <div class="nav-footer-center">
-<p><span id="iasi-publish-date">Publicado: 17/09/2026</span></p>
+<p><span id="iasi-publish-date">Publicado: 22/09/2026</span></p>
 </div>
     <div class="nav-footer-right">
 <p>IASI Rocks 🤘</p>
