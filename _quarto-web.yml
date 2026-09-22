@@ -33,19 +33,6 @@ website:
             href: pages/products/iasi-rstudio.qmd
           - text: "IASI Lua"
             href: pages/products/iasi-lua.qmd
-
-      - text: "Subproductos"
-        menu:
-          - text: "Todos"
-            href: pages/subproducts/index.qmd
-          - text: "IASI Agent"
-            href: pages/subproducts/iasi-agent.qmd
-          - text: "Herramientas"
-            href: pages/subproducts/tools.qmd
-          - text: "Filtros"
-            href: pages/subproducts/filters.qmd
-          - text: "Servidores MCP"
-            href: pages/subproducts/mcp.qmd
       - text: "Manuales"
         menu:
           - text: "Todos"
@@ -62,14 +49,12 @@ website:
             href: pages/viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-edr%2F&title=EDR
           - text: "Historia del viaje"
             href: pages/viewer.html?doc=https%3A%2F%2Fiasi-org-dev.github.io%2Fiasi-journey%2F&title=Journey
-      - text: "Sobre IASI"
-        href: about.qmd
-      - text: "Principios"
-        href: principles.qmd
-      - text: "Manifiesto"
-        href: pages/common/manifesto.qmd
-
-    right:
+      - text: "Instalación"
+        menu:
+          - text: "IASI Plataforma"
+            href: pages/aznar.qmd
+          - text: "IASI Ecosistema"
+            href: pages/aznar.qmd
       - text: "Introducing IASI"
         menu:
           - text: "Metodología"
@@ -81,9 +66,15 @@ website:
             href: "https://1drv.ms/p/c/a07f15822e16273b/IQAFsr4Sqp-mTaE7uciJUwbeAYvi5G5f9SIyoURgqZDEyzM?e=87feLO"
             target: "_blank"            
 
+    right:
+      - text: "Manifiesto"
+        href: pages/common/manifesto.qmd
+      - text: "Principios"
+        href: principles.qmd
+      - text: "Sobre IASI"
+        href: about.qmd
       - text: "The Challenge"
         href: pages/locale/es/challenge.qmd
-
       - text: "ES"
         href: pages/locale/es/index.qmd
         aria-label: "Español"
