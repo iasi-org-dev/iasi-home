@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Filtros · Subproductos · IASI</title>
+<title>Setup · IASI</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -145,33 +145,6 @@ ul.task-list li input[type="checkbox"] {
     </ul>
   </li>
   <li class="nav-item dropdown ">
-    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-subproductos" role="link" data-bs-toggle="dropdown" aria-expanded="false">
- <span class="menu-text">Subproductos</span>
-    </a>
-    <ul class="dropdown-menu" aria-labelledby="nav-menu-subproductos">    
-        <li>
-    <a class="dropdown-item" href="../../pages/subproducts/index.html">
- <span class="dropdown-text">Todos</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../pages/subproducts/iasi-agent.html">
- <span class="dropdown-text">IASI Agent</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../pages/subproducts/tools.html">
- <span class="dropdown-text">Herramientas</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../pages/subproducts/filters.html">
- <span class="dropdown-text">Filtros</span></a>
-  </li>  
-        <li>
-    <a class="dropdown-item" href="../../pages/subproducts/mcp.html">
- <span class="dropdown-text">Servidores MCP</span></a>
-  </li>  
-    </ul>
-  </li>
-  <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-manuales" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Manuales</span>
     </a>
@@ -209,25 +182,26 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
-  <li class="nav-item">
-    <a class="nav-link" href="../../about.html"> 
-<span class="menu-text">Sobre IASI</span></a>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-instalación" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Instalación</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-instalación">    
+        <li>
+    <a class="dropdown-item" href="../../pages/aznar.html">
+ <span class="dropdown-text">IASI Plataforma</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../principles.html"> 
-<span class="menu-text">Principios</span></a>
+        <li>
+    <a class="dropdown-item" href="../../pages/aznar.html">
+ <span class="dropdown-text">IASI Ecosistema</span></a>
   </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../../pages/common/manifesto.html"> 
-<span class="menu-text">Manifiesto</span></a>
-  </li>  
-</ul>
-            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+    </ul>
+  </li>
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-introducing-iasi" role="link" data-bs-toggle="dropdown" aria-expanded="false">
  <span class="menu-text">Introducing IASI</span>
     </a>
-    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-introducing-iasi">    
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-introducing-iasi">    
         <li>
     <a class="dropdown-item" href="https://1drv.ms/p/c/a07f15822e16273b/IQABDnXsoiFaSITQjgnkUD8wATQ36S1oRHzF4N0YMZI0cSY?e=nRzMFc" target="_blank"><i class="bi bi-easel2" role="img">
 </i> 
@@ -240,6 +214,20 @@ ul.task-list li input[type="checkbox"] {
   </li>  
     </ul>
   </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../pages/common/manifesto.html"> 
+<span class="menu-text">Manifiesto</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../principles.html"> 
+<span class="menu-text">Principios</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">Sobre IASI</span></a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="../../pages/locale/es/challenge.html"> 
 <span class="menu-text">The Challenge</span></a>
@@ -275,28 +263,38 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="iasi-artifact-page iasi-artifact-publish">
 <div class="iasi-artifact-subnav">
-<p><a class="iasi-artifact-subnav-brand" href="../../pages/subproducts/filters.html">Filtros</a> <a href="../../pages/subproducts/iasi-lua.html#plantuml">IASI PlantUML</a> <a href="../../pages/subproducts/iasi-lua.html#shinylive">IASI Shiny</a></p>
+<p><a class="iasi-artifact-subnav-brand" href="index.html">Setup</a> <a href="iasi-platform.qmd">IASI Platform</a> <a href="iasi-ecosystem.qmd">IASI Ecosystem</a></p>
 </div>
-<section id="filtros-iasi" class="level1 iasi-artifact-content">
-<h1>Filtros IASI</h1>
-<p>Los <strong>filtros</strong> amplían el proceso de transformación y publicación de contenidos cuando Quarto y Pandoc necesitan un comportamiento específico que merece reutilizarse.</p>
-<p>Se desarrollan como piezas autónomas: cada proyecto incorpora únicamente los filtros que necesita.</p>
+<section id="setup-iasi" class="level1 iasi-artifact-content">
+<h1>Setup IASI</h1>
+<p>IASI dispone de dos entornos de instalación diferentes según el objetivo.</p>
+<p>Uno permite <strong>instalar y utilizar IASI</strong> como plataforma.<br>
+El otro permite <strong>crear, desarrollar y evolucionar el propio ecosistema IASI</strong>.</p>
 <div class="iasi-grid">
-<div class="iasi-card iasi-card-extend">
-<p><strong>DIAGRAMAR</strong></p>
-<section id="iasi-plantuml" class="level3">
-<h3 class="anchored" data-anchor-id="iasi-plantuml"><a href="../../pages/subproducts/iasi-lua.html#plantuml">IASI PlantUML</a></h3>
-<p>Transforma bloques PlantUML en imágenes integradas directamente en publicaciones Quarto.</p>
+<div class="iasi-card iasi-card-publish">
+<p><strong>USAR IASI</strong></p>
+<section id="iasi-platform" class="level3">
+<h3 class="anchored" data-anchor-id="iasi-platform"><a href="iasi-platform.qmd">IASI Platform</a></h3>
+<p>Instalación de la plataforma IASI para utilizar sus capacidades, herramientas e integraciones sin necesidad de montar el entorno completo de desarrollo del ecosistema.</p>
+<p>El punto de entrada será <code>iasi-setup-platform</code>.</p>
 </section>
 </div>
 <div class="iasi-card iasi-card-extend">
-<p><strong>INTERACTUAR</strong></p>
-<section id="iasi-shiny" class="level3">
-<h3 class="anchored" data-anchor-id="iasi-shiny"><a href="../../pages/subproducts/iasi-lua.html#shinylive">IASI Shiny</a></h3>
-<p>Integra aplicaciones Shinylive de R que se ejecutan en el navegador mediante webR dentro de publicaciones estáticas.</p>
+<p><strong>DESARROLLAR IASI</strong></p>
+<section id="iasi-ecosystem" class="level3">
+<h3 class="anchored" data-anchor-id="iasi-ecosystem"><a href="iasi-ecosystem.qmd">IASI Ecosystem</a></h3>
+<p>Instalación del entorno necesario para desarrollar, construir, probar y evolucionar los productos y componentes que forman IASI.</p>
+<p>El punto de entrada será <code>iasi-setup-ecosystem</code>.</p>
 </section>
 </div>
 </div>
+<section id="dos-objetivos-dos-instalaciones" class="level2">
+<h2 class="anchored" data-anchor-id="dos-objetivos-dos-instalaciones">Dos objetivos, dos instalaciones</h2>
+<p><img src="index_files/mediabag/plantuml/34a052422c1346c7067fce1b4ed1f68b406fccd1.png" class="img-fluid"></p>
+<p><strong>IASI Platform</strong> está orientada al usuario de IASI.</p>
+<p><strong>IASI Ecosystem</strong> está orientado a quienes necesitan construir, mantener o evolucionar IASI.</p>
+<p>Ambos setups actúan como puntos de entrada controlados: proporcionan documentación, configuración, scripts y versiones coherentes de los componentes necesarios para cada escenario.</p>
+</section>
 </section>
 </div>
 

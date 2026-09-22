@@ -7,67 +7,25 @@
     "text": "Manuales\n\n\nUser Guides\n\n\nTodosIASI QuartoIASI LuaIASI Tools Dev\n\n\n\n\nTechnical Guides\n\n\nTodosIASI QuartoIASI LuaIASI Tools Dev\n\n\n\n\nDeveloper Guides\n\n\nTodos\n\n\n\n\nUser Guides\nManuales para instalar, configurar y utilizar los productos IASI.\nLos User Guides explican las tareas y flujos de trabajo necesarios para utilizar cada producto.\n\n\nUSER GUIDE\n\niasi.quarto\nConstrucción y publicación reproducible de proyectos Quarto.\n\n\n\nUSER GUIDE\n\niasi.lua\nInstalación, configuración y uso de extensiones Lua.\n\n\n\nUSER GUIDE\n\niasi-tools-dev\nInstalación, comandos y flujos de trabajo de iasi-dev."
   },
   {
-    "objectID": "pages/subproducts/mcp.html",
-    "href": "pages/subproducts/mcp.html",
-    "title": "Servidores MCP IASI",
+    "objectID": "pages/status/to-be-done.html",
+    "href": "pages/status/to-be-done.html",
+    "title": "To be done",
     "section": "",
-    "text": "Servidores MCP\n\n\nServidores MCP IASI\nLos servidores MCP son subproductos que exponen herramientas, recursos o capacidades mediante Model Context Protocol (MCP) para que puedan ser utilizados por sistemas inteligentes y agentes.\nComo el resto de subproductos IASI, no se crean para llenar una categoría. Aparecen cuando una capacidad real necesita una interfaz estable y reutilizable hacia el exterior.\nActualmente no hay servidores MCP publicados en esta categoría."
-  },
-  {
-    "objectID": "pages/subproducts/iasi-quarto.html",
-    "href": "pages/subproducts/iasi-quarto.html",
-    "title": "Publicaciones Quarto, con un proceso en el que confiar",
-    "section": "",
-    "text": "IASI Quarto Qué aporta Workflow Construir y publicar Manuales Repository\n\n\n\n\nHERRAMIENTA DE PUBLICACIÓN\n\n\n\n\nIASI Quarto convierte la construcción y publicación de documentos Quarto en un proceso explícito, verificable y repetible, desde un proyecto individual hasta un repositorio con varios manuales.\n\n\nAbrir User Guide Ver repositorio ↗\n\n\nHTMLPDFMultiproyectoQuarto nativo\n\n\n\n\n\n\n\nORGANIZAR\n\n\nReconoce publicaciones individuales y repositorios con varios proyectos sin convertirlos en un único libro.\n\n\n\nCOMPROBAR\n\n\nDetecta configuraciones y estructuras incoherentes antes de iniciar una construcción costosa.\n\n\n\nPUBLICAR\n\n\nReúne HTML, PDF y recursos en publish/ con una organización estable para GitHub Pages.\n\n\n\n\n\n\nCada etapa tiene una responsabilidad clara. Se puede entender qué ha ocurrido y detener el proceso antes de publicar un resultado incorrecto.\n\n\n01\n\n\nLocaliza las publicaciones disponibles.\n\n\n\n02\n\n\nValida su configuración y estructura.\n\n\n\n03\n\n\nGenera los archivos derivados necesarios.\n\n\n\n04\n\n\nDelega en Quarto el renderizado final.\n\n\n\n05\n\n\nEnsambla el contenido desplegable.\n\n\n\n\n\n\n\n\n\n01\n\n\n\nLee las fuentes locales, comprueba el proyecto y genera los formatos configurados en _outputs/.\niasi.quarto::build()\n\n\n\n\n02\n\n\n\nToma los resultados ya construidos y prepara en publish/ el contenido que se desplegará.\niasi.quarto::publish()\n\n\n\nSeparar ambas operaciones permite revisar el resultado antes de convertirlo en la publicación que verá el usuario.\n\n\n\n\n\n\nConceptos, configuración, comandos y workflow recomendado para utilizar IASI Quarto.\n\n\n\nArquitectura, estrategias de publicación, mantenimiento y próximos pasos.\n\n\n\nCódigo fuente, pruebas y evolución pública del paquete."
-  },
-  {
-    "objectID": "pages/subproducts/iasi-quarto.html#overview",
-    "href": "pages/subproducts/iasi-quarto.html#overview",
-    "title": "Publicaciones Quarto, con un proceso en el que confiar",
-    "section": "",
-    "text": "ORGANIZAR\n\n\nReconoce publicaciones individuales y repositorios con varios proyectos sin convertirlos en un único libro.\n\n\n\nCOMPROBAR\n\n\nDetecta configuraciones y estructuras incoherentes antes de iniciar una construcción costosa.\n\n\n\nPUBLICAR\n\n\nReúne HTML, PDF y recursos en publish/ con una organización estable para GitHub Pages."
-  },
-  {
-    "objectID": "pages/subproducts/iasi-quarto.html#workflow",
-    "href": "pages/subproducts/iasi-quarto.html#workflow",
-    "title": "Publicaciones Quarto, con un proceso en el que confiar",
-    "section": "",
-    "text": "Cada etapa tiene una responsabilidad clara. Se puede entender qué ha ocurrido y detener el proceso antes de publicar un resultado incorrecto.\n\n\n01\n\n\nLocaliza las publicaciones disponibles.\n\n\n\n02\n\n\nValida su configuración y estructura.\n\n\n\n03\n\n\nGenera los archivos derivados necesarios.\n\n\n\n04\n\n\nDelega en Quarto el renderizado final.\n\n\n\n05\n\n\nEnsambla el contenido desplegable."
-  },
-  {
-    "objectID": "pages/subproducts/iasi-quarto.html#build-publish",
-    "href": "pages/subproducts/iasi-quarto.html#build-publish",
-    "title": "Publicaciones Quarto, con un proceso en el que confiar",
-    "section": "",
-    "text": "01\n\n\n\nLee las fuentes locales, comprueba el proyecto y genera los formatos configurados en _outputs/.\niasi.quarto::build()\n\n\n\n\n02\n\n\n\nToma los resultados ya construidos y prepara en publish/ el contenido que se desplegará.\niasi.quarto::publish()\n\n\n\nSeparar ambas operaciones permite revisar el resultado antes de convertirlo en la publicación que verá el usuario."
-  },
-  {
-    "objectID": "pages/subproducts/iasi-quarto.html#resources",
-    "href": "pages/subproducts/iasi-quarto.html#resources",
-    "title": "Publicaciones Quarto, con un proceso en el que confiar",
-    "section": "",
-    "text": "Conceptos, configuración, comandos y workflow recomendado para utilizar IASI Quarto.\n\n\n\nArquitectura, estrategias de publicación, mantenimiento y próximos pasos.\n\n\n\nCódigo fuente, pruebas y evolución pública del paquete."
-  },
-  {
-    "objectID": "pages/subproducts/iasi-agent.html",
-    "href": "pages/subproducts/iasi-agent.html",
-    "title": "iasi-agent",
-    "section": "",
-    "text": "Subproductos\n\n\niasi-agent\n\n\n\niasi-agent proporciona un agente capaz de ejecutar trabajo dentro de un proyecto IASI.\nUn modelo de lenguaje puede recibir un prompt y producir una respuesta, pero eso no basta para realizar trabajo de ingeniería sobre un proyecto real. iasi-agent añade la capa de ejecución necesaria para que el modelo pueda trabajar con el workspace.\nEl agente puede comprender una tarea, inspeccionar el proyecto, leer los artefactos relevantes, utilizar las capacidades disponibles y materializar los resultados solicitados, siempre dentro de las reglas y permisos definidos por IASI.\niasi-agent no define el workflow ni sustituye a IASI. Es uno de los posibles ejecutores capaces de realizar el trabajo definido por el proyecto.\nSu objetivo es permitir que distintos modelos, incluidos modelos locales, puedan convertirse en ejecutores reales de trabajo IASI sin acoplar la metodología a un modelo, proveedor o agente concreto."
-  },
-  {
-    "objectID": "pages/status/under-construction.html",
-    "href": "pages/status/under-construction.html",
-    "title": "Under construction",
-    "section": "",
-    "text": "🚧 WORK IN PROGRESS\n\n\nIASI artifact\n\n\nUnder construction\nThis artifact already has a place in the IASI ecosystem, but its public landing page is still being built.\n\n← Back to IASI"
+    "text": "🚧 WORK IN PROGRESS\n\n\nIASI artifact\n\n\nTo be done\nThis artifact is planned, but its implementation and public documentation have not started yet.\n\n← Back to IASI"
   },
   {
     "objectID": "pages/products/index.html",
     "href": "pages/products/index.html",
-    "title": "Artefactos IASI",
+    "title": "Productos IASI",
     "section": "",
-    "text": "Artefactos IASI Tools Dev IASI RStudio\n\n\nArtefactos IASI\nLos artefactos sostienen el trabajo cotidiano del ecosistema IASI. Preparan el entorno y ofrecen las herramientas necesarias para desarrollar, probar y operar sus productos.\nA diferencia de los subproductos, no nacen para convertirse en soluciones públicas con identidad y ciclo de vida propios. Son elementos vinculados al funcionamiento interno del ecosistema y a la ingeniería que hace posible construirlo de manera consistente.\n\nLos subproductos reutilizan soluciones. Los artefactos sostienen el entorno en el que esas soluciones se desarrollan.\n\n\n\nOPERAR\n\niasi-tools-dev\nHerramientas y comandos de soporte que simplifican las operaciones habituales del ecosistema IASI y unifican su forma de trabajo.\n\n\n\nDESARROLLAR\n\niasi-rstudio\nEntorno de trabajo preparado para desarrollar y validar publicaciones y productos del ecosistema IASI con RStudio."
+    "text": "Productos IASI R IASI Dev IASI Lua IASI RStudio\n\n\n\nLos productos IASI son soluciones software nacidas para resolver necesidades reales del ecosistema: diseño, desarrollo, automatización, publicación, productividad e integración de herramientas.\nPero no están ligados exclusivamente a IASI.\nCada producto tiene identidad y ciclo de vida propios: evoluciona de forma independiente, puede versionarse, probarse, documentarse y liberarse por separado, y mantiene un diseño suficientemente autónomo para ser utilizado en otros contextos.\n\nIASI es el origen y el primer caso de uso del producto, no su frontera.\n\nEsta autonomía es una característica deliberada. Un producto IASI debe poder satisfacer necesidades equivalentes en otros proyectos u organizaciones con los ajustes necesarios, sin tener que cambiar su diseño ni su arquitectura fundamental.\nPor tanto, los productos no son simples utilidades internas ni piezas circunstanciales del ecosistema. Son software reutilizable surgido de necesidades concretas y preparado para tener vida propia.\n\n\nMATERIALIZAR\n\n\nCapa R del ecosistema. Proporciona funcionalidad reutilizable para proyectos R y Quarto y materializa el ciclo validate → build → publish → release.\n\n\n\nORQUESTAR\n\n\nCLI de desarrollo y operación. Descubre targets, ejecuta comandos y workflows, materializa entornos y automatiza procesos repetibles de ingeniería.\n\n\n\nEXTENDER\n\n\nConjunto de extensiones Lua para Quarto con core común y capacidades como PlantUML, Shiny y Graphics, reutilizables también mediante interfaces MCP.\n\n\n\nINTEGRAR\n\n\nAddin para RStudio que integra capacidades y flujos IASI dentro del entorno interactivo de desarrollo.\n\n\n\n\n\nAunque nacen dentro del ecosistema IASI, los productos no dependen de la evolución de un único libro, publicación o proyecto consumidor.\nCada uno mantiene su propio ciclo:\nnecesidad\n   ↓\ndiseño\n   ↓\ndesarrollo\n   ↓\nvalidación\n   ↓\nrelease\n   ↓\nevolución\nEse ciclo permite que un producto pueda continuar evolucionando aunque cambie el proyecto que lo originó, y que pueda ser reutilizado en otros escenarios donde exista una necesidad equivalente.\nLa relación es, por tanto:\nnecesidad IASI\n     ↓\nproducto\n     ↓\nuso en IASI\n     +\notros usos\n\nUna solución se convierte en producto cuando deja de depender del problema concreto que la originó."
+  },
+  {
+    "objectID": "pages/products/index.html#lifecycle",
+    "href": "pages/products/index.html#lifecycle",
+    "title": "Productos IASI",
+    "section": "",
+    "text": "Aunque nacen dentro del ecosistema IASI, los productos no dependen de la evolución de un único libro, publicación o proyecto consumidor.\nCada uno mantiene su propio ciclo:\nnecesidad\n   ↓\ndiseño\n   ↓\ndesarrollo\n   ↓\nvalidación\n   ↓\nrelease\n   ↓\nevolución\nEse ciclo permite que un producto pueda continuar evolucionando aunque cambie el proyecto que lo originó, y que pueda ser reutilizado en otros escenarios donde exista una necesidad equivalente.\nLa relación es, por tanto:\nnecesidad IASI\n     ↓\nproducto\n     ↓\nuso en IASI\n     +\notros usos\n\nUna solución se convierte en producto cuando deja de depender del problema concreto que la originó."
   },
   {
     "objectID": "pages/products/iasi-r.html",
@@ -259,11 +217,11 @@
     "text": "IASI nace como una iniciativa personal, pero no pretende ser un proyecto personal. Está concebido para crecer de forma abierta, incorporando nuevas ideas, herramientas, metodologías y colaboradores.\nToda aportación fundamentada será bienvenida.\nPorque creemos que la Ingeniería Aumentada por Sistemas Inteligentes solo puede construirse desde la colaboración, el pensamiento crítico y la experimentación.\n\nLa mejor metodología no es la que seguimos, sino la que descubrimos mientras resolvemos el problema adecuado."
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": " IASI at a glance",
+    "objectID": "books.html",
+    "href": "books.html",
+    "title": "Libros",
     "section": "",
-    "text": "IASI is an engineering methodology for working with Intelligent Systems as part of the real engineering process.\nIt is not a collection of prompts. It is not an AI tool. It is not an agent framework. It is not a way to generate code faster.\nIASI is a way to think, structure, execute, validate and preserve engineering work when Intelligent Systems are part of the process.\nAt its core, IASI turns engineering work into an explicit and traceable flow:\n\nInputs → Definitions → Planning → Execution → Validation → Acceptance → Artifacts\n\nThe objective is not to automate engineering away, it’s to make better use of Intelligent Systems while preserving what still matters most: understanding, decisions, engineering judgement, verification and responsibility.\nIASI is also executable, its methodology is supported by commands, skills, validations, workflows and conventions that allow projects to apply the methodology instead of merely documenting it. Around the methodology, an ecosystem is growing:\nBooks. Tools. Labs. Skills. Commands. Infrastructure. Supporting artifacts.\nSome explain IASI. Some implement it. Some validate it. Some are useful on their own.\nThe methodology is the core. Everything else exists to make it understandable, usable, executable and verifiable.\nAnd one principle sits underneath all of it:\nAs implementation becomes cheaper, acknowledge becomes more valuable."
+    "text": "Libros\n\nUna idea, varios productos, una misma ingeniería.\n\n\n\n\nLos libros reúnen y ordenan el conocimiento de IASI. Cada volumen vive en su propio repositorio y puede evolucionar de forma independiente.\n\n\n\nLIBRO · VOLUMEN I\n\niasi-book-I\nDel conocimiento al sistema Inteligente\nLos fundamentos teóricos y técnicos sobre los que se construye IASI.\n\n\n\nLIBRO · VOLUMEN II\n\niasi-book-II\nDe la experiencia al método\nLaboratorios para comprender cómo trabajar con sistemas inteligentes.\n\n\n\nLIBRO · VOLUMEN III\n\niasi-book-III\nDel método a la metodologia\nDel aprendizaje y conocimiento a una forma de trabajo estructurada, reusable y aplicable."
   },
   {
     "objectID": "about.html",
@@ -336,11 +294,11 @@
     "text": "Un sistema que aprende a construirse\nIASI es por tanto dos cosas al mismo tiempo. Es una propuesta sobre cómo puede evolucionar la ingeniería cuando los Sistemas Inteligentes se integran de manera real en el proceso, y es un experimento continuo en el que esa propuesta se utiliza para construir sus propios libros, herramientas, decisiones, agentes, prácticas e infraestructura.\nNo estamos escribiendo primero una metodología para intentar demostrar después que funciona. Estamos construyendo, observando, cuestionando, decidiendo, formalizando y volviendo a construir.\nEl ciclo no termina cuando aparece una nueva herramienta.\nPrecisamente ahí empieza la siguiente vuelta.\nIASI no se diseña primero y se aplica después. IASI se está utilizando para construir IASI."
   },
   {
-    "objectID": "books.html",
-    "href": "books.html",
-    "title": "Libros",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": " IASI at a glance",
     "section": "",
-    "text": "Libros\n\nUna idea, varios productos, una misma ingeniería.\n\n\n\n\nLos libros reúnen y ordenan el conocimiento de IASI. Cada volumen vive en su propio repositorio y puede evolucionar de forma independiente.\n\n\n\nLIBRO · VOLUMEN I\n\niasi-book-I\nDel conocimiento al sistema Inteligente\nLos fundamentos teóricos y técnicos sobre los que se construye IASI.\n\n\n\nLIBRO · VOLUMEN II\n\niasi-book-II\nDe la experiencia al método\nLaboratorios para comprender cómo trabajar con sistemas inteligentes.\n\n\n\nLIBRO · VOLUMEN III\n\niasi-book-III\nDel método a la metodologia\nDel aprendizaje y conocimiento a una forma de trabajo estructurada, reusable y aplicable."
+    "text": "IASI is an engineering methodology for working with Intelligent Systems as part of the real engineering process.\nIt is not a collection of prompts. It is not an AI tool. It is not an agent framework. It is not a way to generate code faster.\nIASI is a way to think, structure, execute, validate and preserve engineering work when Intelligent Systems are part of the process.\nAt its core, IASI turns engineering work into an explicit and traceable flow:\n\nInputs → Definitions → Planning → Execution → Validation → Acceptance → Artifacts\n\nThe objective is not to automate engineering away, it’s to make better use of Intelligent Systems while preserving what still matters most: understanding, decisions, engineering judgement, verification and responsibility.\nIASI is also executable, its methodology is supported by commands, skills, validations, workflows and conventions that allow projects to apply the methodology instead of merely documenting it. Around the methodology, an ecosystem is growing:\nBooks. Tools. Labs. Skills. Commands. Infrastructure. Supporting artifacts.\nSome explain IASI. Some implement it. Some validate it. Some are useful on their own.\nThe methodology is the core. Everything else exists to make it understandable, usable, executable and verifiable.\nAnd one principle sits underneath all of it:\nAs implementation becomes cheaper, acknowledge becomes more valuable."
   },
   {
     "objectID": "pages/common/manifesto-bilingual.html",
@@ -609,67 +567,25 @@
     "text": "Uso del plugin, creación de proyectos, generación de EDR y acceso a las operaciones IASI desde RStudio.\n\n\n\nPrincipios de integración, responsabilidades del plugin y criterios para incorporar nuevas capacidades IASI a RStudio.\n\n\n\nArquitectura de integración, comunicación con iasi-r e iasi-dev y mecanismos técnicos utilizados dentro de RStudio.\n\n\n\nCódigo fuente, integración con RStudio, documentación y evolución pública de iasi-rstudio."
   },
   {
-    "objectID": "pages/status/to-be-done.html",
-    "href": "pages/status/to-be-done.html",
-    "title": "To be done",
+    "objectID": "pages/setup/index.html",
+    "href": "pages/setup/index.html",
+    "title": "Setup IASI",
     "section": "",
-    "text": "🚧 WORK IN PROGRESS\n\n\nIASI artifact\n\n\nTo be done\nThis artifact is planned, but its implementation and public documentation have not started yet.\n\n← Back to IASI"
+    "text": "Setup IASI Platform IASI Ecosystem\n\n\n\nIASI dispone de dos entornos de instalación diferentes según el objetivo.\nUno permite instalar y utilizar IASI como plataforma.\nEl otro permite crear, desarrollar y evolucionar el propio ecosistema IASI.\n\n\nUSAR IASI\n\n\nInstalación de la plataforma IASI para utilizar sus capacidades, herramientas e integraciones sin necesidad de montar el entorno completo de desarrollo del ecosistema.\nEl punto de entrada será iasi-setup-platform.\n\n\n\nDESARROLLAR IASI\n\n\nInstalación del entorno necesario para desarrollar, construir, probar y evolucionar los productos y componentes que forman IASI.\nEl punto de entrada será iasi-setup-ecosystem.\n\n\n\n\n\n\nIASI Platform está orientada al usuario de IASI.\nIASI Ecosystem está orientado a quienes necesitan construir, mantener o evolucionar IASI.\nAmbos setups actúan como puntos de entrada controlados: proporcionan documentación, configuración, scripts y versiones coherentes de los componentes necesarios para cada escenario."
   },
   {
-    "objectID": "pages/subproducts/filters.html",
-    "href": "pages/subproducts/filters.html",
-    "title": "Filtros IASI",
+    "objectID": "pages/setup/index.html#dos-objetivos-dos-instalaciones",
+    "href": "pages/setup/index.html#dos-objetivos-dos-instalaciones",
+    "title": "Setup IASI",
     "section": "",
-    "text": "Filtros IASI PlantUML IASI Shiny\n\n\nFiltros IASI\nLos filtros amplían el proceso de transformación y publicación de contenidos cuando Quarto y Pandoc necesitan un comportamiento específico que merece reutilizarse.\nSe desarrollan como piezas autónomas: cada proyecto incorpora únicamente los filtros que necesita.\n\n\nDIAGRAMAR\n\nIASI PlantUML\nTransforma bloques PlantUML en imágenes integradas directamente en publicaciones Quarto.\n\n\n\nINTERACTUAR\n\nIASI Shiny\nIntegra aplicaciones Shinylive de R que se ejecutan en el navegador mediante webR dentro de publicaciones estáticas."
+    "text": "IASI Platform está orientada al usuario de IASI.\nIASI Ecosystem está orientado a quienes necesitan construir, mantener o evolucionar IASI.\nAmbos setups actúan como puntos de entrada controlados: proporcionan documentación, configuración, scripts y versiones coherentes de los componentes necesarios para cada escenario."
   },
   {
-    "objectID": "pages/subproducts/iasi-lua.html",
-    "href": "pages/subproducts/iasi-lua.html",
-    "title": "iasi.lua: Extensiones reutilizables para Quarto",
+    "objectID": "pages/status/under-construction.html",
+    "href": "pages/status/under-construction.html",
+    "title": "Under construction",
     "section": "",
-    "text": "iasi.lua IASI PlantUML IASI Shiny IASI Graphics\n\n\n\nUna plataforma común para desarrollar, construir y distribuir extensiones Lua del ecosistema IASI sin acoplar los proyectos consumidores a su código fuente.\n\n\niasi.lua mantiene separadas la plataforma compartida, la fuente de cada extensión y su distribución. El resultado son extensiones autónomas que cada proyecto instala únicamente cuando las necesita. Su repositorio técnico es iasi-lua.\n\n\nDIAGRAMAR\n\n\nConvierte descripciones PlantUML en imágenes integradas dentro de los documentos Quarto.\n\n\n\nINTERACTUAR\n\n\nIncorpora aplicaciones Shinylive de R que se ejecutan en el navegador mediante webR.\n\n\n\nPRÓXIMAMENTE\n\n\nIncorporará recursos gráficos reutilizables para comunicar de forma coherente en documentos Quarto.\n\n\n\n\n_extensions/ es un artefacto generado: se construye desde la fuente y no se edita manualmente.\n\n\n\nLa primera extensión distribuida por la plataforma integra diagramas PlantUML en documentos Quarto.\n\n\nESCRIBIR\n\n\nEl documento conserva una descripción PlantUML legible, versionable y cercana al contenido que explica.\n\n\n\nRENDERIZAR\n\n\nEl filtro solicita la imagen al servidor PlantUML y la incorpora al mediabag de Pandoc durante el renderizado.\n\n\n\nLa extensión se activa explícitamente en el proyecto:\nfilters:\n  - iasi-plantuml\n\n\n\nLa extensión iasi-shiny incorpora aplicaciones interactivas de R en documentos Quarto. Las aplicaciones se ejecutan directamente en el navegador mediante Shinylive y webR, por lo que la publicación resultante sigue siendo un sitio estático compatible con GitHub Pages.\n\n\nCREAR\n\n\nEl documento define la aplicación en un bloque {shinylive-r} junto al contenido que la explica.\n\n\n\nPUBLICAR\n\n\nShinylive prepara los recursos durante el renderizado y webR ejecuta la aplicación en el navegador, sin servidor Shiny propio.\n\n\n\nLa extensión se activa explícitamente en el proyecto:\nfilters:\n  - iasi-shiny\n\n\n\n\n\n\nInstalación, configuración, diagramas PlantUML, aplicaciones Shinylive y solución de problemas para proyectos consumidores.\n\n\n\nArquitectura del núcleo, construcción de extensiones y decisiones internas de diseño.\n\n\n\nCódigo fuente, extensiones generadas, pruebas y scripts de construcción.\n\n\n\nResponsabilidades del núcleo, estructura de las extensiones y modelo de distribución.\n\n\n\nGuía para incorporar una nueva extensión a la plataforma."
-  },
-  {
-    "objectID": "pages/subproducts/iasi-lua.html#overview",
-    "href": "pages/subproducts/iasi-lua.html#overview",
-    "title": "iasi.lua: Extensiones reutilizables para Quarto",
-    "section": "",
-    "text": "iasi.lua mantiene separadas la plataforma compartida, la fuente de cada extensión y su distribución. El resultado son extensiones autónomas que cada proyecto instala únicamente cuando las necesita. Su repositorio técnico es iasi-lua.\n\n\nDIAGRAMAR\n\n\nConvierte descripciones PlantUML en imágenes integradas dentro de los documentos Quarto.\n\n\n\nINTERACTUAR\n\n\nIncorpora aplicaciones Shinylive de R que se ejecutan en el navegador mediante webR.\n\n\n\nPRÓXIMAMENTE\n\n\nIncorporará recursos gráficos reutilizables para comunicar de forma coherente en documentos Quarto.\n\n\n\n\n_extensions/ es un artefacto generado: se construye desde la fuente y no se edita manualmente."
-  },
-  {
-    "objectID": "pages/subproducts/iasi-lua.html#plantuml",
-    "href": "pages/subproducts/iasi-lua.html#plantuml",
-    "title": "iasi.lua: Extensiones reutilizables para Quarto",
-    "section": "",
-    "text": "La primera extensión distribuida por la plataforma integra diagramas PlantUML en documentos Quarto.\n\n\nESCRIBIR\n\n\nEl documento conserva una descripción PlantUML legible, versionable y cercana al contenido que explica.\n\n\n\nRENDERIZAR\n\n\nEl filtro solicita la imagen al servidor PlantUML y la incorpora al mediabag de Pandoc durante el renderizado.\n\n\n\nLa extensión se activa explícitamente en el proyecto:\nfilters:\n  - iasi-plantuml"
-  },
-  {
-    "objectID": "pages/subproducts/iasi-lua.html#shinylive",
-    "href": "pages/subproducts/iasi-lua.html#shinylive",
-    "title": "iasi.lua: Extensiones reutilizables para Quarto",
-    "section": "",
-    "text": "La extensión iasi-shiny incorpora aplicaciones interactivas de R en documentos Quarto. Las aplicaciones se ejecutan directamente en el navegador mediante Shinylive y webR, por lo que la publicación resultante sigue siendo un sitio estático compatible con GitHub Pages.\n\n\nCREAR\n\n\nEl documento define la aplicación en un bloque {shinylive-r} junto al contenido que la explica.\n\n\n\nPUBLICAR\n\n\nShinylive prepara los recursos durante el renderizado y webR ejecuta la aplicación en el navegador, sin servidor Shiny propio.\n\n\n\nLa extensión se activa explícitamente en el proyecto:\nfilters:\n  - iasi-shiny"
-  },
-  {
-    "objectID": "pages/subproducts/iasi-lua.html#resources",
-    "href": "pages/subproducts/iasi-lua.html#resources",
-    "title": "iasi.lua: Extensiones reutilizables para Quarto",
-    "section": "",
-    "text": "Instalación, configuración, diagramas PlantUML, aplicaciones Shinylive y solución de problemas para proyectos consumidores.\n\n\n\nArquitectura del núcleo, construcción de extensiones y decisiones internas de diseño.\n\n\n\nCódigo fuente, extensiones generadas, pruebas y scripts de construcción.\n\n\n\nResponsabilidades del núcleo, estructura de las extensiones y modelo de distribución.\n\n\n\nGuía para incorporar una nueva extensión a la plataforma."
-  },
-  {
-    "objectID": "pages/subproducts/index.html",
-    "href": "pages/subproducts/index.html",
-    "title": "Subproductos IASI",
-    "section": "",
-    "text": "Subproductos Herramientas Filtros Servidores MCP\n\n\nSubproductos IASI\nLos productos IASI son los libros. Durante su desarrollo aparecen necesidades concretas que deben resolverse para poder avanzar.\nIASI parte de un principio sencillo:\n\nCada necesidad será analizada de forma independiente.\nSi una metodología existente ofrece una buena respuesta, la utilizaremos. Si necesita adaptarse, la adaptaremos. Si varias aportan valor, las combinaremos. Y cuando ninguna resulte suficiente, construiremos una nueva, que pasará a formar parte de los assets de la compañía o se publicará como open source.\n\nLos subproductos nacen precisamente de ese proceso.\nCuando la resolución de una necesidad da lugar a una herramienta, filtro, componente, servidor MCP, aplicación u otro elemento con entidad propia y capacidad de reutilización, ese resultado deja de ser únicamente una pieza interna del producto y se convierte en un subproducto IASI.\nLos subproductos, por tanto, no se diseñan de antemano como un catálogo cerrado. Emergen de las necesidades reales que aparecen durante el desarrollo de los productos IASI.\nPueden adoptar formas muy diferentes y utilizar tecnologías distintas. Lo que los une no es su implementación, sino su origen: todos son soluciones reutilizables surgidas al resolver problemas concretos encontrados durante el desarrollo y aplicación de IASI.\n\n\nAUTOMATIZAR\n\nHerramientas\nUtilidades y componentes ejecutables que convierten tareas repetibles del proceso de ingeniería en capacidades reutilizables.\n\n\n\nEXTENDER\n\nFiltros\nFiltros que amplían Quarto y Pandoc con comportamientos específicos necesarios dentro del ecosistema IASI.\n\n\n\nCONECTAR\n\nServidores MCP\nServidores que exponen herramientas, recursos o capacidades mediante Model Context Protocol.\n\n\n\n\nLos productos desarrollan el conocimiento. Los subproductos convierten parte de ese conocimiento en soluciones reutilizables."
-  },
-  {
-    "objectID": "pages/subproducts/tools.html",
-    "href": "pages/subproducts/tools.html",
-    "title": "Herramientas IASI",
-    "section": "",
-    "text": "Herramientas IASI Quarto IASI Graphics\n\n\nHerramientas IASI\nLas herramientas son subproductos ejecutables o utilizables directamente que aparecen cuando una necesidad del proceso merece convertirse en una capacidad reusable.\nNo nacen para completar un catálogo. Nacen porque, durante el desarrollo de IASI, una solución deja de ser circunstancial y pasa a tener valor más allá del problema que la originó.\n\n\nPUBLICAR\n\nIASI Quarto\nConvierte la construcción, validación y publicación de proyectos Quarto en un proceso explícito, verificable y repetible.\n\n\n\nCOMUNICAR\n\nIASI Graphics\nRecursos para generar gráficos sencillos, claros y repetibles en documentación y presentaciones IASI."
+    "text": "🚧 WORK IN PROGRESS\n\n\nIASI artifact\n\n\nUnder construction\nThis artifact already has a place in the IASI ecosystem, but its public landing page is still being built.\n\n← Back to IASI"
   },
   {
     "objectID": "principles.html",
